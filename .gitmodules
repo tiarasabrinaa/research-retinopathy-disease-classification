@@ -1,0 +1,3 @@
+[submodule "retinopathy-classification-pipeline"]
+	path = retinopathy-classification-pipeline
+	url = https://github.com/tiarasabrinaa/retinopathy-classification-pipeline.git
