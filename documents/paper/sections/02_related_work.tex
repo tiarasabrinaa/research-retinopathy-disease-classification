@@ -1,2 +1,47 @@
 \section{Related Work}
-Placeholder related work text. Placeholder related work text.Placeholder related work text.Placeholder related work text.Placeholder related work text.Placeholder related work text.Placeholder related work text.Placeholder related work text.
+\subsection{Deep Learning-Based Eye Disease Classification}
+
+Deep learning-based eye disease classification using fundus images has attracted significant research attention in recent years. The Eye Disease Classification dataset \cite{dataset} is one of the publicly available datasets frequently used for benchmarking multiclass eye disease classification models. The characteristics of the dataset are presented in Table~\ref{tab:dataset}.
+
+\begin{table}[htbp]
+\caption{Distribution of Eye Disease Classification Dataset}
+\label{tab:dataset}
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Class} & \textbf{Number of Images} & \textbf{Percentage (\%)} \\
+\hline
+Cataract & 1,038 & 24.62 \\
+\hline
+Diabetic Retinopathy & 1,098 & 26.04 \\
+\hline
+Glaucoma & 1,007 & 23.88 \\
+\hline
+Normal & 1,074 & 25.47 \\
+\hline
+\textbf{Total} & \textbf{4,217} & \textbf{100.00} \\
+\hline
+\multicolumn{3}{l}{$^{\mathrm{a}}$Compiled from \cite{erdas2024} and \cite{jibon2025}.}
+\end{tabular}
+\end{center}
+\end{table}
+
+Dataset characteristics are relatively consistent across studies, comprising 4,217 fundus images categorized into four classes: cataract, diabetic retinopathy, glaucoma, and normal eyes. Although the dataset is relatively balanced, glaucoma represents the minority class, which motivates the use of data augmentation techniques during preprocessing.
+
+The dataset has been utilized in several studies to evaluate the performance of deep learning models. A comparative study involving DenseNet, EfficientNet, Xception, VGG, and ResNet was conducted in \cite{erdas2024}. Among these architectures, EfficientNet achieved the highest accuracy of 87.84\%. Subsequently, transfer learning with EfficientNet-B3 combined with data augmentation and cosine annealing learning rate scheduling was proposed in \cite{alsohemi2025}, resulting in an improved accuracy of 95.12\%.
+
+A transfer learning framework named TL-MED was introduced in \cite{jibon2025}, where five CNN-based architectures and an ensemble model were evaluated. DenseNet169 achieved the highest individual accuracy of 96\%. In another study, AlexNet, EfficientNet-B0, EfficientNet-B7, and a custom CNN architecture were compared \cite{elkenawy2026}. AlexNet demonstrated the best performance with an accuracy of 93.65\%, and the study further employed SHAP-based interpretability analysis to identify clinically relevant image regions.
+
+Based on these studies, existing research on this dataset primarily focuses on conventional CNN architectures and their variants, including VGG, ResNet, DenseNet, EfficientNet, and AlexNet. In contrast, investigations involving modern CNN architectures such as ConvNeXt and transformer-based architectures such as DeiT remain limited. This research gap motivates the comparative analysis conducted in this study.
+
+\subsection{ConvNeXt and DeiT Architectures for Image Analysis}
+
+As representative architectures of modern convolutional networks and vision transformers, ConvNeXt and DeiT have demonstrated promising performance across various image classification tasks. ConvNeXt was introduced in \cite{liu2022} as a modernization of the ResNet architecture by incorporating several design principles inspired by Vision Transformers, including patchify stems, depthwise convolutions, inverted bottlenecks, larger kernel sizes, and simplified normalization and activation layers.
+
+On the other hand, DeiT (Data-efficient Image Transformer) was proposed in \cite{touvron2021} as an extension of the original Vision Transformer architecture \cite{dosovitskiy2021}. DeiT introduces a knowledge distillation strategy that enables transformer models to be trained effectively on relatively smaller datasets while maintaining competitive performance.
+
+Several comparative studies have investigated the strengths and limitations of CNN and Vision Transformer architectures in image analysis tasks. A literature review presented in \cite{mauricio2023} concluded that CNNs benefit from strong inductive biases and superior data efficiency, whereas Vision Transformers are more effective at capturing global contextual information but generally require larger datasets and greater computational resources.
+
+In the specific domain of fundus image analysis, a comparative study between CNN-based architectures, including ConvNeXt, and transformer-based models was conducted in \cite{alayon2023}. The results showed that the transformer-based CaiT architecture achieved the highest AUC of 0.979, although the performance gap between the best CNN and transformer models was relatively small. Similar findings were reported in \cite{hwang2023}, where Vision Transformer models achieved non-inferior or superior performance compared with CNNs on five out of six glaucoma datasets.
+
+Overall, these findings suggest that the relative advantages of modern CNN architectures such as ConvNeXt and transformer-based architectures such as DeiT depend heavily on dataset characteristics and training strategies. Therefore, no clear consensus has emerged regarding the superiority of either approach. This motivates a direct comparison between ConvNeXt and DeiT for multiclass eye disease classification using the Eye Disease Classification dataset.
