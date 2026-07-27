@@ -7,7 +7,8 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -21,65 +22,114 @@
 \BIBdecl
 
 \bibitem{Liu2022}
-Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet for the 2020s,'' in \emph{2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 6 2022, pp. 11\,966--11\,976.
+Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet
+  for the 2020s,'' in \emph{2022 IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 6
+  2022, pp. 11\,966--11\,976.
 
 \bibitem{Chopowiec2023}
-A.~R. Chłopowiec, K.~Karanowski, T.~Skrzypczak, M.~Grzesiuk, A.~B. Chłopowiec, and M.~Tabakov, ``Counteracting data bias and class imbalance—towards a useful and reliable retinal disease recognition system,'' \emph{Diagnostics}, vol.~13, p. 1904, 5 2023.
+A.~R. Chłopowiec, K.~Karanowski, T.~Skrzypczak, M.~Grzesiuk, A.~B.
+  Chłopowiec, and M.~Tabakov, ``Counteracting data bias and class
+  imbalance—towards a useful and reliable retinal disease recognition
+  system,'' \emph{Diagnostics}, vol.~13, p. 1904, 5 2023.
 
 \bibitem{dosovitskiy2021imageworth16x16words}
 \BIBentryALTinterwordspacing
-A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai, T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly, J.~Uszkoreit, and N.~Houlsby, ``An image is worth 16x16 words: Transformers for image recognition at scale,'' 2021. [Online]. Available: \url{https://arxiv.org/abs/2010.11929}
+A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai,
+  T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly, J.~Uszkoreit,
+  and N.~Houlsby, ``An image is worth 16x16 words: Transformers for image
+  recognition at scale,'' 2021. [Online]. Available:
+  \url{https://arxiv.org/abs/2010.11929}
 \BIBentrySTDinterwordspacing
 
 \bibitem{touvron2021trainingdataefficientimagetransformers}
 \BIBentryALTinterwordspacing
-H.~Touvron, M.~Cord, M.~Douze, F.~Massa, A.~Sablayrolles, and H.~Jégou, ``Training data-efficient image transformers \& distillation through attention,'' 2021. [Online]. Available: \url{https://arxiv.org/abs/2012.12877}
+H.~Touvron, M.~Cord, M.~Douze, F.~Massa, A.~Sablayrolles, and H.~Jégou,
+  ``Training data-efficient image transformers \& distillation through
+  attention,'' 2021. [Online]. Available:
+  \url{https://arxiv.org/abs/2012.12877}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AlMohimeed2025}
-A.~AlMohimeed, ``Multi-stage framework using transformer models, feature fusion and ensemble learning for enhancing eye disease classification,'' \emph{Scientific Reports}, vol.~15, p. 30469, 8 2025.
+A.~AlMohimeed, ``Multi-stage framework using transformer models, feature fusion
+  and ensemble learning for enhancing eye disease classification,''
+  \emph{Scientific Reports}, vol.~15, p. 30469, 8 2025.
 
 \bibitem{Bengio2000}
-Y.~Bengio, ``Continuous optimization of hyper-parameters,'' in \emph{Proceedings of the IEEE-INNS-ENNS International Joint Conference on Neural Networks. IJCNN 2000. Neural Computing: New Challenges and Perspectives for the New Millennium}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2000, pp. 305--310 vol.1.
+Y.~Bengio, ``Continuous optimization of hyper-parameters,'' in
+  \emph{Proceedings of the IEEE-INNS-ENNS International Joint Conference on
+  Neural Networks. IJCNN 2000. Neural Computing: New Challenges and
+  Perspectives for the New Millennium}.\hskip 1em plus 0.5em minus 0.4em\relax
+  IEEE, 2000, pp. 305--310 vol.1.
 
 \bibitem{JMLR:v13:bergstra12a}
 \BIBentryALTinterwordspacing
-J.~Bergstra and Y.~Bengio, ``Random search for hyper-parameter optimization,'' \emph{Journal of Machine Learning Research}, vol.~13, no.~10, pp. 281--305, 2012. [Online]. Available: \url{http://jmlr.org/papers/v13/bergstra12a.html}
+J.~Bergstra and Y.~Bengio, ``Random search for hyper-parameter optimization,''
+  \emph{Journal of Machine Learning Research}, vol.~13, no.~10, pp. 281--305,
+  2012. [Online]. Available: \url{http://jmlr.org/papers/v13/bergstra12a.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Reyes2024}
-D.~Reyes and J.~Sánchez, ``Performance of convolutional neural networks for the classification of brain tumors using magnetic resonance imaging,'' \emph{Heliyon}, vol.~10, p. e25468, 2 2024.
+D.~Reyes and J.~Sánchez, ``Performance of convolutional neural networks for
+  the classification of brain tumors using magnetic resonance imaging,''
+  \emph{Heliyon}, vol.~10, p. e25468, 2 2024.
 
 \bibitem{Jiang2021}
-S.~Jiang, G.~J. Zanazzi, and S.~Hassanpour, ``Predicting prognosis and idh mutation status for patients with lower-grade gliomas using whole slide images,'' \emph{Scientific Reports}, vol.~11, p. 16849, 8 2021.
+S.~Jiang, G.~J. Zanazzi, and S.~Hassanpour, ``Predicting prognosis and idh
+  mutation status for patients with lower-grade gliomas using whole slide
+  images,'' \emph{Scientific Reports}, vol.~11, p. 16849, 8 2021.
 
 \bibitem{Selvaraju2020}
-R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra, ``Grad-cam: Visual explanations from deep networks via gradient-based localization,'' \emph{International Journal of Computer Vision}, vol. 128, pp. 336--359, 2 2020.
+R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra,
+  ``Grad-cam: Visual explanations from deep networks via gradient-based
+  localization,'' \emph{International Journal of Computer Vision}, vol. 128,
+  pp. 336--359, 2 2020.
 
 \bibitem{Alhafdhi2026}
-A.~Y. Alhafdhi, G.~Abosamra, and A.~M. Alshareef, ``Syncretic grad-cam integrated vit-cnn hybrids with inherent explainability for early thyroid cancer diagnosis from ultrasound,'' \emph{Diagnostics}, vol.~16, p. 999, 3 2026.
+A.~Y. Alhafdhi, G.~Abosamra, and A.~M. Alshareef, ``Syncretic grad-cam
+  integrated vit-cnn hybrids with inherent explainability for early thyroid
+  cancer diagnosis from ultrasound,'' \emph{Diagnostics}, vol.~16, p. 999, 3
+  2026.
 
 \bibitem{Vanitha2025}
-K.~Vanitha, T.~R. Mahesh, V.~V. Kumar, and S.~Guluwadi, ``Enhanced tuberculosis detection using vision transformers and explainable ai with a grad-cam approach on chest x-rays,'' \emph{BMC Medical Imaging}, vol.~25, p.~96, 3 2025.
+K.~Vanitha, T.~R. Mahesh, V.~V. Kumar, and S.~Guluwadi, ``Enhanced tuberculosis
+  detection using vision transformers and explainable ai with a grad-cam
+  approach on chest x-rays,'' \emph{BMC Medical Imaging}, vol.~25, p.~96, 3
+  2025.
 
 \bibitem{AbdEl-Ghany2025}
-S.~A. El-Ghany, M.~A. Mahmood, and A.~A.~A. El-Aziz, ``Automated eye disease diagnosis using a 2d cnn with grad-cam: High-accuracy detection of retinal asymmetries for multiclass classification,'' \emph{Symmetry}, vol.~17, p. 768, 5 2025.
+S.~A. El-Ghany, M.~A. Mahmood, and A.~A.~A. El-Aziz, ``Automated eye disease
+  diagnosis using a 2d cnn with grad-cam: High-accuracy detection of retinal
+  asymmetries for multiclass classification,'' \emph{Symmetry}, vol.~17, p.
+  768, 5 2025.
 
 \bibitem{Abnar2020}
-S.~Abnar and W.~Zuidema, ``Quantifying attention flow in transformers,'' in \emph{Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computational Linguistics, 2020, pp. 4190--4197.
+S.~Abnar and W.~Zuidema, ``Quantifying attention flow in transformers,'' in
+  \emph{Proceedings of the 58th Annual Meeting of the Association for
+  Computational Linguistics}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Association for Computational Linguistics, 2020, pp. 4190--4197.
 
 \bibitem{Cheng2025}
-Z.~Cheng, Y.~Wu, Y.~Li, L.~Cai, and B.~Ihnaini, ``A comprehensive review of explainable artificial intelligence (xai) in computer vision,'' \emph{Sensors}, vol.~25, p. 4166, 7 2025.
+Z.~Cheng, Y.~Wu, Y.~Li, L.~Cai, and B.~Ihnaini, ``A comprehensive review of
+  explainable artificial intelligence (xai) in computer vision,''
+  \emph{Sensors}, vol.~25, p. 4166, 7 2025.
 
 \bibitem{Li2023}
-Y.~Li, J.~Wang, X.~Dai, L.~Wang, C.-C.~M. Yeh, Y.~Zheng, W.~Zhang, and K.-L. Ma, ``How does attention work in vision transformers? a visual analytics attempt,'' \emph{IEEE Transactions on Visualization and Computer Graphics}, vol.~29, pp. 2888--2900, 6 2023.
+Y.~Li, J.~Wang, X.~Dai, L.~Wang, C.-C.~M. Yeh, Y.~Zheng, W.~Zhang, and K.-L.
+  Ma, ``How does attention work in vision transformers? a visual analytics
+  attempt,'' \emph{IEEE Transactions on Visualization and Computer Graphics},
+  vol.~29, pp. 2888--2900, 6 2023.
 
 \bibitem{petsiuk2018riserandomizedinputsampling}
 \BIBentryALTinterwordspacing
-V.~Petsiuk, A.~Das, and K.~Saenko, ``Rise: Randomized input sampling for explanation of black-box models,'' 2018. [Online]. Available: \url{https://arxiv.org/abs/1806.07421}
+V.~Petsiuk, A.~Das, and K.~Saenko, ``Rise: Randomized input sampling for
+  explanation of black-box models,'' 2018. [Online]. Available:
+  \url{https://arxiv.org/abs/1806.07421}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Skliarov2025}
-M.~Skliarov, R.~E. Shawi, C.~Dhaoui, and N.~Ahmed, ``A comparative evaluation of explainability techniques for image data,'' \emph{Scientific Reports}, vol.~15, p. 41898, 11 2025.
+M.~Skliarov, R.~E. Shawi, C.~Dhaoui, and N.~Ahmed, ``A comparative evaluation
+  of explainability techniques for image data,'' \emph{Scientific Reports},
+  vol.~15, p. 41898, 11 2025.
 
 \end{thebibliography}
