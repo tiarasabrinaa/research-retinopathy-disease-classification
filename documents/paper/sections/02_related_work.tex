@@ -6,27 +6,22 @@ Deep learning-based eye disease classification using fundus images has attracted
 \begin{table}[htbp]
 \caption{Distribution of Eye Disease Classification Dataset}
 \label{tab:dataset}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
+\centering
+\begin{tabular}{lcc}
+\toprule
 \textbf{Class} & \textbf{Number of Images} & \textbf{Percentage (\%)} \\
-\hline
+\midrule
 Cataract & 1,038 & 24.62 \\
-\hline
 Diabetic Retinopathy & 1,098 & 26.04 \\
-\hline
 Glaucoma & 1,007 & 23.88 \\
-\hline
 Normal & 1,074 & 25.47 \\
-\hline
+\midrule
 \textbf{Total} & \textbf{4,217} & \textbf{100.00} \\
-\hline
-\multicolumn{3}{l}{$^{\mathrm{a}}$Compiled from \cite{erdas2024} and \cite{jibon2025}.}
+\bottomrule
 \end{tabular}
-\end{center}
 \end{table}
 
-Dataset characteristics are relatively consistent across studies, comprising 4,217 fundus images categorized into four classes: cataract, diabetic retinopathy, glaucoma, and normal eyes. Although the dataset is relatively balanced, glaucoma represents the minority class, which motivates the use of data augmentation techniques during preprocessing.
+Dataset characteristics are relatively consistent across studies, comprising 4,217 fundus images categorized into four classes: cataract, diabetic retinopathy, glaucoma, and normal eyes \cite{erdas2024,jibon2025}. Although the dataset is relatively balanced, glaucoma represents the minority class, which motivates the use of data augmentation techniques during preprocessing.
 
 The dataset has been utilized in several studies to evaluate the performance of deep learning models. A comparative study involving DenseNet, EfficientNet, Xception, VGG, and ResNet was conducted in \cite{erdas2024}. Among these architectures, EfficientNet achieved the highest accuracy of 87.84\%. Subsequently, transfer learning with EfficientNet-B3 combined with data augmentation and cosine annealing learning rate scheduling was proposed in \cite{alsohemi2025}, resulting in an improved accuracy of 95.12\%.
 
