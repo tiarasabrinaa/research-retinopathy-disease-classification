@@ -48,6 +48,12 @@ E.-S. El-kenawy, N.~Khodadadi, K.~Sh.Gaber, E.~Khodadadi, A.~Alhussan,
   learning and alexnet with statistical models analysis,'' \emph{PLOS One},
   vol.~21, 01 2026.
 
+\bibitem{Selvaraju2017}
+R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra,
+  ``Grad-cam: Visual explanations from deep networks via gradient-based
+  localization,'' in \emph{2017 IEEE International Conference on Computer
+  Vision (ICCV)}, 2017, pp. 618--626.
+
 \bibitem{Liu2022}
 Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet
   for the 2020s,'' in \emph{2022 IEEE/CVF Conference on Computer Vision and
