@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1785119768.44269 "main.aux" "main.bbl" "main" 1785119777.81193 0
-  "./references.bib" 1785119749 16674 43a64fd0d792eb4fa78a1e54cbdbbd26 ""
+["bibtex main"] 1785125500.43664 "main.aux" "main.bbl" "main" 1785125507.24457 0
+  "./references.bib" 1785125489 19634 9aa1ea4dd34209c7dbc95b39c94c6f53 ""
   "C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1785119775 4708 c7577e977ae78558c2b6c449fa45a47c "pdflatex"
+  "main.aux" 1785125504 4966 ffea7386ba4e5db288f138470f3b0725 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1785119769.60094 "d:/OPTIGUARD/research-retinopathy-disease-classification/documents/paper/main.tex" "main.pdf" "main" 1785119777.81542 0
+["pdflatex"] 1785125501.33655 "d:/OPTIGUARD/research-retinopathy-disease-classification/documents/paper/main.tex" "main.pdf" "main" 1785125507.24697 0
   "C:/Users/Nida Anggraeni/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1784778050 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Nida Anggraeni/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1784778028 13337879 a79749365f8f19839e3158d909d1e735 ""
   "C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -159,11 +159,11 @@
   "C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "d:/OPTIGUARD/research-retinopathy-disease-classification/documents/paper/main.tex" 1785118806 1984 cf4e08f408f9267fb4017bb0efd79c0f ""
   "figures/DeiT-main-architecture.png" 1785118806 60791 2e2587fbc2a9305e9b272ec269639a4d ""
-  "main.aux" 1785119775 4708 c7577e977ae78558c2b6c449fa45a47c "pdflatex"
-  "main.bbl" 1785119769 6052 e1f152e1ea21b565b1b9407839e818ca "bibtex main"
+  "main.aux" 1785125504 4966 ffea7386ba4e5db288f138470f3b0725 "pdflatex"
+  "main.bbl" 1785125501 8142 6f33586eefaca3cf2b18402820efd3af "bibtex main"
   "main.tex" 1785118806 1984 cf4e08f408f9267fb4017bb0efd79c0f ""
   "sections/01_introduction.tex" 1784776187 54 2ff05f5e8e8cf1ea6daf9358743088da ""
-  "sections/02_related_work.tex" 1785119251 5293 69cdd27ccb967c84cc12ab1eb5b54698 ""
+  "sections/02_related_work.tex" 1785124967 5351 903c80c3065d6ee589e307099eb1a506 ""
   "sections/03_methodology.tex" 1785118806 15995 0e8e32c227ed74075871cd7b2f0ed962 ""
   "sections/04_results.tex" 1784776187 44 80d4b1d534dee52b8d22ad583ff9b181 ""
   "sections/05_conclusion.tex" 1784776187 50 6fd51616e53a90534f2780de294b2bb2 ""

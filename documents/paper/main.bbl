@@ -21,17 +21,46 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{dataset}
+M.~M. Islam, C.~K. Shahnaz, and M.~A. Hossain, ``Eye disease classification
+  dataset,'' Kaggle Dataset, 2022.
+
+\bibitem{erdas2024}
+C.~Erdas and G.~Arslan, ``Efficient detection of multiclass eye diseases using
+  deep learning models: A comparative study,'' \emph{MATTER: International
+  Journal of Science and Technology}, vol.~10, pp. 55--66, 01 2024.
+
+\bibitem{jibon2025}
+F.~Jibon, F.~Rabby, N.~Rahman, M.~Uddin, F.~Rushu, M.~Islam, M.~A. Uddin,
+  A.~Khraisat, M.~Kazi, and M.~A. Talukder, ``Tl-med: Multiclass eye disease
+  classification based on ensemble transfer learning and crvo–brvo detection
+  via a single shot multibox detector,'' \emph{DIGITAL HEALTH}, vol.~11, 09
+  2025.
+
+\bibitem{alsohemi2025}
+R.~Alsohemi and S.~Dardouri, ``Fundus image-based eye disease detection using
+  efficientnetb3 architecture,'' \emph{Journal of Imaging}, vol.~11, p. 279, 08
+  2025.
+
+\bibitem{elkenawy2026}
+E.-S. El-kenawy, N.~Khodadadi, K.~Sh.Gaber, E.~Khodadadi, A.~Alhussan,
+  D.~Khafaga, and M.~Eid, ``Automated retinal disease classification using deep
+  learning and alexnet with statistical models analysis,'' \emph{PLOS One},
+  vol.~21, 01 2026.
+
 \bibitem{Liu2022}
 Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet
   for the 2020s,'' in \emph{2022 IEEE/CVF Conference on Computer Vision and
   Pattern Recognition (CVPR)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 6
   2022, pp. 11\,966--11\,976.
 
-\bibitem{Chopowiec2023}
-A.~R. Chłopowiec, K.~Karanowski, T.~Skrzypczak, M.~Grzesiuk, A.~B.
-  Chłopowiec, and M.~Tabakov, ``Counteracting data bias and class
-  imbalance—towards a useful and reliable retinal disease recognition
-  system,'' \emph{Diagnostics}, vol.~13, p. 1904, 5 2023.
+\bibitem{touvron2021trainingdataefficientimagetransformers}
+\BIBentryALTinterwordspacing
+H.~Touvron, M.~Cord, M.~Douze, F.~Massa, A.~Sablayrolles, and H.~Jégou,
+  ``Training data-efficient image transformers \& distillation through
+  attention,'' 2021. [Online]. Available:
+  \url{https://arxiv.org/abs/2012.12877}
+\BIBentrySTDinterwordspacing
 
 \bibitem{dosovitskiy2021imageworth16x16words}
 \BIBentryALTinterwordspacing
@@ -42,13 +71,29 @@ A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai,
   \url{https://arxiv.org/abs/2010.11929}
 \BIBentrySTDinterwordspacing
 
-\bibitem{touvron2021trainingdataefficientimagetransformers}
-\BIBentryALTinterwordspacing
-H.~Touvron, M.~Cord, M.~Douze, F.~Massa, A.~Sablayrolles, and H.~Jégou,
-  ``Training data-efficient image transformers \& distillation through
-  attention,'' 2021. [Online]. Available:
-  \url{https://arxiv.org/abs/2012.12877}
-\BIBentrySTDinterwordspacing
+\bibitem{mauricio2023}
+J.~Maur{\'\i}cio, I.~Domingues, and J.~Bernardino, ``Comparing vision
+  transformers and convolutional neural networks for image classification: A
+  literature review,'' \emph{Applied Sciences}, vol.~13, no.~9, p. 5521, 2023.
+
+\bibitem{alayon2023}
+S.~Alay{\'o}n, J.~Hern{\'a}ndez, F.~J. Fumero, J.~F. Sigut, and
+  T.~D{\'\i}az-Alem{\'a}n, ``Comparison of the performance of convolutional
+  neural networks and vision transformer-based systems for automated glaucoma
+  detection with eye fundus images,'' \emph{Applied Sciences}, vol.~13, no.~23,
+  p. 12722, 2023.
+
+\bibitem{hwang2023}
+E.~E. Hwang, C.~Dake, Y.~Han, J.~Lin, and J.~Shan, ``Multi-dataset comparison
+  of vision transformers and convolutional neural networks for detecting
+  glaucomatous optic neuropathy from fundus photographs,''
+  \emph{Bioengineering}, vol.~10, no.~11, p. 1266, 2023.
+
+\bibitem{Chopowiec2023}
+A.~R. Chłopowiec, K.~Karanowski, T.~Skrzypczak, M.~Grzesiuk, A.~B.
+  Chłopowiec, and M.~Tabakov, ``Counteracting data bias and class
+  imbalance—towards a useful and reliable retinal disease recognition
+  system,'' \emph{Diagnostics}, vol.~13, p. 1904, 5 2023.
 
 \bibitem{AlMohimeed2025}
 A.~AlMohimeed, ``Multi-stage framework using transformer models, feature fusion

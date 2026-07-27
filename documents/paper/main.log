@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.23)  27 JUL 2026 09:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.23)  27 JUL 2026 11:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -487,48 +487,10 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
  (C:\Users\Nida Anggraeni\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (sections/01_introduction.tex) (sections/02_related_work.tex
-
-LaTeX Warning: Citation `dataset' on page 1 undefined on input line 4.
+) (sections/01_introduction.tex) (sections/02_related_work.tex [1{C:/Users/Nida Anggraeni/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-LaTeX Warning: Citation `erdas2024' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Citation `jibon2025' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Citation `erdas2024' on page 1 undefined on input line 31.
-
-
-LaTeX Warning: Citation `alsohemi2025' on page 1 undefined on input line 31.
-
-
-LaTeX Warning: Citation `jibon2025' on page 1 undefined on input line 33.
-
-
-LaTeX Warning: Citation `elkenawy2026' on page 1 undefined on input line 33.
-
-
-LaTeX Warning: Citation `touvron2021' on page 1 undefined on input line 41.
-
-
-LaTeX Warning: Citation `dosovitskiy2021' on page 1 undefined on input line 41.
-
-
-LaTeX Warning: Citation `mauricio2023' on page 1 undefined on input line 43.
-
-[1{C:/Users/Nida Anggraeni/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
-
-
-]
-
-LaTeX Warning: Citation `alayon2023' on page 2 undefined on input line 45.
-
-
-LaTeX Warning: Citation `hwang2023' on page 2 undefined on input line 45.
-
-) (sections/03_methodology.tex
+]) (sections/03_methodology.tex
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 60.
  (C:\Users\Nida Anggraeni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
@@ -557,21 +519,17 @@ Before submitting the final camera ready copy, remember to:
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 14814 strings out of 467871
- 305357 string characters out of 5413984
- 695611 words of memory out of 5000000
+ 14813 strings out of 467871
+ 305338 string characters out of 5413984
+ 696618 words of memory out of 5000000
  43414 multiletter control sequences out of 15000+600000
- 677524 words of font info for 138 fonts, out of 8000000 for 9000
+ 676417 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,104p,1123b,801s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Nida Anggraeni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 228373 bytes).
+Output written on main.pdf (5 pages, 229835 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
