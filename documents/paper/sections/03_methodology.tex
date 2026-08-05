@@ -80,9 +80,42 @@ The data-efficient design of DeiT makes it particularly suitable for medical ima
 
 \subsubsection{Hyperparameter \& Model Selection}
 
-Model parameters refer to the network weights that are automatically learned through backpropagation, whereas hyperparameters are predefined before or during training to control the optimization process, regularization, and learning schedule \cite{Bengio2000}. During transfer learning and fine-tuning, commonly configured hyperparameters include the learning rate, batch size, weight decay, optimizer, learning-rate scheduler, data augmentation strategy, number of training epochs, and early stopping criterion. Hyperparameter optimization can be performed using several strategies, including grid search, random search, and manual tuning. Out of those three, random search is generally more efficient than grid search because only a small subset of hyperparameters typically has a significant influence on model performance, and the importance of individual hyperparameters may vary across different datasets \cite{JMLR:v13:bergstra12a}.
+Hyperparameters are user-defined settings that control the training process, whereas model parameters are the network weights automatically learned through backpropagation \cite{Bengio2000}. Both ConvNeXt and DeiT were fine-tuned using the AdamW optimizer \cite{loshchilov2019decoupledweightdecayregularization} with a cosine learning-rate decay schedule, following the official training recipes of both architectures. Although the original papers employ different optimization settings, particularly for large-scale ImageNet pretraining, reproducing their exact recipes was impractical given the hardware constraints and the smaller size of the diabetic retinopathy dataset. A unified configuration was therefore adopted for both models to ensure a fair comparison.
 
-To ensure an unbiased evaluation, the dataset is divided into training, validation, and testing subsets. The training set is used to optimize the model parameters, whereas the validation set is exclusively used to select the best hyperparameter configuration and training scenario \cite{Reyes2024}. The test set is used solely for the final performance evaluation and is not involved in any stage of model selection or hyperparameter optimization \cite{Jiang2021}. This separation prevents information leakage and optimistic bias, resulting in a more reliable estimation of the model's generalization capability.
+Rather than exhaustively tuning every hyperparameter, only the fine-tuning learning rate was optimized, using random search over grid search. This choice follows Bergstra and Bengio \cite{JMLR:v13:bergstra12a}, who showed that random search is generally more efficient because only a small subset of hyperparameters typically has a significant impact on model performance, and this importance varies across datasets. All remaining settings were fixed across both architectures and selected from their official training recipes or adjusted to the available computational budget. Table~\ref{tab:hyperparameter} summarizes the final configuration.
+
+\begin{table}[htbp]
+    \caption{Final Hyperparameter Configuration.}
+    \label{tab:hyperparameter}
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabularx}{\columnwidth}{>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}X}
+        \toprule
+        \textbf{Hyperparameter} & \textbf{Value} & \textbf{Source / Justification} \\
+        \midrule
+        Optimizer & AdamW & Common optimizer for both models \\
+        \addlinespace
+        LR scheduler & Cosine decay & Adopted from both models' official recipes \\
+        \addlinespace
+        Weight decay & 0.05 & Adopted from DeiT training recipe and applied consistently to both models \\
+        \addlinespace
+        Label smoothing & 0.1 & Recommended by both ConvNeXt and DeiT papers \\
+        \addlinespace
+        Linear probe LR & $10^{-3}$ & Empirically selected for the linear probing stage \\
+        \addlinespace
+        Linear probe epochs & 5 & Chosen to initialize the classifier before fine-tuning \\
+        \addlinespace
+        Fine-tuning epochs & 25 & Selected based on computational budget \\
+        \addlinespace
+        Fine-tuning LR & Random search & Tuned during experiments \\
+        \addlinespace
+        Batch size & 32 & Limited by available GPU memory \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+To ensure an unbiased evaluation, the dataset is divided into training, validation, and testing subsets. the training set optimized the model parameters, the validation set selected the best hyperparameter configuration \cite{Reyes2024}, and the test set was reserved solely for final performance evaluation, without involvement in any stage of model selection \cite{Jiang2021}. This separation prevents information leakage and optimistic bias, yielding a more reliable estimate of the model's generalization capability.
 
 \subsection{Explainable AI (XAI) on Computer Vision}
 
