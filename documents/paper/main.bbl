@@ -7,8 +7,7 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
-  \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -21,166 +20,127 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{dataset}
-M.~M. Islam, C.~K. Shahnaz, and M.~A. Hossain, ``Eye disease classification
-  dataset,'' Kaggle Dataset, 2022.
+\bibitem{WHO2023Blindness}
+\BIBentryALTinterwordspacing
+{World Health Organization}, ``Blindness and vision impairment,'' 2023, fact Sheet, Accessed: 2026-08-04. [Online]. Available: \url{https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment}
+\BIBentrySTDinterwordspacing
 
-\bibitem{erdas2024}
-C.~Erdas and G.~Arslan, ``Efficient detection of multiclass eye diseases using
-  deep learning models: A comparative study,'' \emph{MATTER: International
-  Journal of Science and Technology}, vol.~10, pp. 55--66, 01 2024.
+\bibitem{GBD2024Cataract}
+{Vision Loss Expert Group of the Global Burden of Disease Study} and {GBD 2019 Blindness and Vision Impairment Collaborators}, ``Global estimates on the number of people blind or visually impaired by cataract: A meta-analysis from 2000 to 2020,'' \emph{Eye}, vol.~38, no.~11, pp. 2156--2172, 2024.
 
-\bibitem{jibon2025}
-F.~Jibon, F.~Rabby, N.~Rahman, M.~Uddin, F.~Rushu, M.~Islam, M.~A. Uddin,
-  A.~Khraisat, M.~Kazi, and M.~A. Talukder, ``Tl-med: Multiclass eye disease
-  classification based on ensemble transfer learning and crvo–brvo detection
-  via a single shot multibox detector,'' \emph{DIGITAL HEALTH}, vol.~11, 09
-  2025.
+\bibitem{Pan2025DR}
+e.~a. Pan, ``Global, regional and national burden of blindness and vision loss attributable to diabetic retinopathy, 1990--2021: A systematic analysis for the global burden of disease study 2021,'' \emph{Diabetes, Obesity and Metabolism}, 2025.
 
-\bibitem{alsohemi2025}
-R.~Alsohemi and S.~Dardouri, ``Fundus image-based eye disease detection using
-  efficientnetb3 architecture,'' \emph{Journal of Imaging}, vol.~11, p. 279, 08
-  2025.
+\bibitem{Vania2024Glaucoma}
+\BIBentryALTinterwordspacing
+e.~a. Vania, ``Global incidence and risk factors for glaucoma,'' \emph{Journal of Global Health}, vol.~14, p. 04252, 2024. [Online]. Available: \url{https://jogh.org/2024/jogh-14-04252}
+\BIBentrySTDinterwordspacing
 
-\bibitem{elkenawy2026}
-E.-S. El-kenawy, N.~Khodadadi, K.~Sh.Gaber, E.~Khodadadi, A.~Alhussan,
-  D.~Khafaga, and M.~Eid, ``Automated retinal disease classification using deep
-  learning and alexnet with statistical models analysis,'' \emph{PLOS One},
-  vol.~21, 01 2026.
-
-\bibitem{Selvaraju2017}
-R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra,
-  ``Grad-cam: Visual explanations from deep networks via gradient-based
-  localization,'' in \emph{2017 IEEE International Conference on Computer
-  Vision (ICCV)}, 2017, pp. 618--626.
+\bibitem{Elkholy2024OCT}
+Elkholy and Marzouk, ``Deep learning-based classification of eye diseases using convolutional neural network for oct images,'' \emph{Frontiers in Computer Science}, 2024.
 
 \bibitem{Liu2022}
-Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet
-  for the 2020s,'' in \emph{2022 IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition (CVPR)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 6
-  2022, pp. 11\,966--11\,976.
+Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet for the 2020s,'' in \emph{2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 6 2022, pp. 11\,966--11\,976.
 
 \bibitem{touvron2021trainingdataefficientimagetransformers}
 \BIBentryALTinterwordspacing
-H.~Touvron, M.~Cord, M.~Douze, F.~Massa, A.~Sablayrolles, and H.~Jégou,
-  ``Training data-efficient image transformers \& distillation through
-  attention,'' 2021. [Online]. Available:
-  \url{https://arxiv.org/abs/2012.12877}
+H.~Touvron, M.~Cord, M.~Douze, F.~Massa, A.~Sablayrolles, and H.~Jégou, ``Training data-efficient image transformers \& distillation through attention,'' 2021. [Online]. Available: \url{https://arxiv.org/abs/2012.12877}
 \BIBentrySTDinterwordspacing
+
+\bibitem{Gomez2022Saliency}
+\BIBentryALTinterwordspacing
+C.~Gomez, T.~Fr{\'e}our, and H.~Mouch{\`e}re, ``Metrics for saliency map evaluation of deep learning explanation methods,'' in \emph{International Conference on Pattern Recognition and Artificial Intelligence (ICPRAI)}, ser. Lecture Notes in Computer Science, 2022. [Online]. Available: \url{https://arxiv.org/abs/2201.13291}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Cho2025GMAR}
+\BIBentryALTinterwordspacing
+e.~a. Cho, ``Gmar: Gradient-driven multi-head attention rollout for vision transformer interpretability,'' 2025. [Online]. Available: \url{https://arxiv.org/abs/2504.19414}
+\BIBentrySTDinterwordspacing
+
+\bibitem{dataset}
+M.~M. Islam, C.~K. Shahnaz, and M.~A. Hossain, ``Eye disease classification dataset,'' Kaggle Dataset, 2022.
+
+\bibitem{erdas2024}
+C.~Erdas and G.~Arslan, ``Efficient detection of multiclass eye diseases using deep learning models: A comparative study,'' \emph{MATTER: International Journal of Science and Technology}, vol.~10, pp. 55--66, 01 2024.
+
+\bibitem{jibon2025}
+F.~Jibon, F.~Rabby, N.~Rahman, M.~Uddin, F.~Rushu, M.~Islam, M.~A. Uddin, A.~Khraisat, M.~Kazi, and M.~A. Talukder, ``Tl-med: Multiclass eye disease classification based on ensemble transfer learning and crvo–brvo detection via a single shot multibox detector,'' \emph{DIGITAL HEALTH}, vol.~11, 09 2025.
+
+\bibitem{alsohemi2025}
+R.~Alsohemi and S.~Dardouri, ``Fundus image-based eye disease detection using efficientnetb3 architecture,'' \emph{Journal of Imaging}, vol.~11, p. 279, 08 2025.
+
+\bibitem{elkenawy2026}
+E.-S. El-kenawy, N.~Khodadadi, K.~Sh.Gaber, E.~Khodadadi, A.~Alhussan, D.~Khafaga, and M.~Eid, ``Automated retinal disease classification using deep learning and alexnet with statistical models analysis,'' \emph{PLOS One}, vol.~21, 01 2026.
+
+\bibitem{Selvaraju2017}
+R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra, ``Grad-cam: Visual explanations from deep networks via gradient-based localization,'' in \emph{2017 IEEE International Conference on Computer Vision (ICCV)}, 2017, pp. 618--626.
 
 \bibitem{dosovitskiy2021imageworth16x16words}
 \BIBentryALTinterwordspacing
-A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai,
-  T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly, J.~Uszkoreit,
-  and N.~Houlsby, ``An image is worth 16x16 words: Transformers for image
-  recognition at scale,'' 2021. [Online]. Available:
-  \url{https://arxiv.org/abs/2010.11929}
+A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai, T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly, J.~Uszkoreit, and N.~Houlsby, ``An image is worth 16x16 words: Transformers for image recognition at scale,'' 2021. [Online]. Available: \url{https://arxiv.org/abs/2010.11929}
 \BIBentrySTDinterwordspacing
 
 \bibitem{mauricio2023}
-J.~Maur{\'\i}cio, I.~Domingues, and J.~Bernardino, ``Comparing vision
-  transformers and convolutional neural networks for image classification: A
-  literature review,'' \emph{Applied Sciences}, vol.~13, no.~9, p. 5521, 2023.
+J.~Maur{\'\i}cio, I.~Domingues, and J.~Bernardino, ``Comparing vision transformers and convolutional neural networks for image classification: A literature review,'' \emph{Applied Sciences}, vol.~13, no.~9, p. 5521, 2023.
 
 \bibitem{alayon2023}
-S.~Alay{\'o}n, J.~Hern{\'a}ndez, F.~J. Fumero, J.~F. Sigut, and
-  T.~D{\'\i}az-Alem{\'a}n, ``Comparison of the performance of convolutional
-  neural networks and vision transformer-based systems for automated glaucoma
-  detection with eye fundus images,'' \emph{Applied Sciences}, vol.~13, no.~23,
-  p. 12722, 2023.
+S.~Alay{\'o}n, J.~Hern{\'a}ndez, F.~J. Fumero, J.~F. Sigut, and T.~D{\'\i}az-Alem{\'a}n, ``Comparison of the performance of convolutional neural networks and vision transformer-based systems for automated glaucoma detection with eye fundus images,'' \emph{Applied Sciences}, vol.~13, no.~23, p. 12722, 2023.
 
 \bibitem{hwang2023}
-E.~E. Hwang, C.~Dake, Y.~Han, J.~Lin, and J.~Shan, ``Multi-dataset comparison
-  of vision transformers and convolutional neural networks for detecting
-  glaucomatous optic neuropathy from fundus photographs,''
-  \emph{Bioengineering}, vol.~10, no.~11, p. 1266, 2023.
+E.~E. Hwang, C.~Dake, Y.~Han, J.~Lin, and J.~Shan, ``Multi-dataset comparison of vision transformers and convolutional neural networks for detecting glaucomatous optic neuropathy from fundus photographs,'' \emph{Bioengineering}, vol.~10, no.~11, p. 1266, 2023.
 
 \bibitem{Chopowiec2023}
-A.~R. Chłopowiec, K.~Karanowski, T.~Skrzypczak, M.~Grzesiuk, A.~B.
-  Chłopowiec, and M.~Tabakov, ``Counteracting data bias and class
-  imbalance—towards a useful and reliable retinal disease recognition
-  system,'' \emph{Diagnostics}, vol.~13, p. 1904, 5 2023.
+A.~R. Chłopowiec, K.~Karanowski, T.~Skrzypczak, M.~Grzesiuk, A.~B. Chłopowiec, and M.~Tabakov, ``Counteracting data bias and class imbalance—towards a useful and reliable retinal disease recognition system,'' \emph{Diagnostics}, vol.~13, p. 1904, 5 2023.
 
 \bibitem{AlMohimeed2025}
-A.~AlMohimeed, ``Multi-stage framework using transformer models, feature fusion
-  and ensemble learning for enhancing eye disease classification,''
-  \emph{Scientific Reports}, vol.~15, p. 30469, 8 2025.
+A.~AlMohimeed, ``Multi-stage framework using transformer models, feature fusion and ensemble learning for enhancing eye disease classification,'' \emph{Scientific Reports}, vol.~15, p. 30469, 8 2025.
 
 \bibitem{Bengio2000}
-Y.~Bengio, ``Continuous optimization of hyper-parameters,'' in
-  \emph{Proceedings of the IEEE-INNS-ENNS International Joint Conference on
-  Neural Networks. IJCNN 2000. Neural Computing: New Challenges and
-  Perspectives for the New Millennium}.\hskip 1em plus 0.5em minus 0.4em\relax
-  IEEE, 2000, pp. 305--310 vol.1.
+Y.~Bengio, ``Continuous optimization of hyper-parameters,'' in \emph{Proceedings of the IEEE-INNS-ENNS International Joint Conference on Neural Networks. IJCNN 2000. Neural Computing: New Challenges and Perspectives for the New Millennium}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2000, pp. 305--310 vol.1.
+
+\bibitem{loshchilov2019decoupledweightdecayregularization}
+\BIBentryALTinterwordspacing
+I.~Loshchilov and F.~Hutter, ``Decoupled weight decay regularization,'' 2019. [Online]. Available: \url{https://arxiv.org/abs/1711.05101}
+\BIBentrySTDinterwordspacing
 
 \bibitem{JMLR:v13:bergstra12a}
 \BIBentryALTinterwordspacing
-J.~Bergstra and Y.~Bengio, ``Random search for hyper-parameter optimization,''
-  \emph{Journal of Machine Learning Research}, vol.~13, no.~10, pp. 281--305,
-  2012. [Online]. Available: \url{http://jmlr.org/papers/v13/bergstra12a.html}
+J.~Bergstra and Y.~Bengio, ``Random search for hyper-parameter optimization,'' \emph{Journal of Machine Learning Research}, vol.~13, no.~10, pp. 281--305, 2012. [Online]. Available: \url{http://jmlr.org/papers/v13/bergstra12a.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Reyes2024}
-D.~Reyes and J.~Sánchez, ``Performance of convolutional neural networks for
-  the classification of brain tumors using magnetic resonance imaging,''
-  \emph{Heliyon}, vol.~10, p. e25468, 2 2024.
+D.~Reyes and J.~Sánchez, ``Performance of convolutional neural networks for the classification of brain tumors using magnetic resonance imaging,'' \emph{Heliyon}, vol.~10, p. e25468, 2 2024.
 
 \bibitem{Jiang2021}
-S.~Jiang, G.~J. Zanazzi, and S.~Hassanpour, ``Predicting prognosis and idh
-  mutation status for patients with lower-grade gliomas using whole slide
-  images,'' \emph{Scientific Reports}, vol.~11, p. 16849, 8 2021.
+S.~Jiang, G.~J. Zanazzi, and S.~Hassanpour, ``Predicting prognosis and idh mutation status for patients with lower-grade gliomas using whole slide images,'' \emph{Scientific Reports}, vol.~11, p. 16849, 8 2021.
 
 \bibitem{Selvaraju2020}
-R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra,
-  ``Grad-cam: Visual explanations from deep networks via gradient-based
-  localization,'' \emph{International Journal of Computer Vision}, vol. 128,
-  pp. 336--359, 2 2020.
+R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra, ``Grad-cam: Visual explanations from deep networks via gradient-based localization,'' \emph{International Journal of Computer Vision}, vol. 128, pp. 336--359, 2 2020.
 
 \bibitem{Alhafdhi2026}
-A.~Y. Alhafdhi, G.~Abosamra, and A.~M. Alshareef, ``Syncretic grad-cam
-  integrated vit-cnn hybrids with inherent explainability for early thyroid
-  cancer diagnosis from ultrasound,'' \emph{Diagnostics}, vol.~16, p. 999, 3
-  2026.
+A.~Y. Alhafdhi, G.~Abosamra, and A.~M. Alshareef, ``Syncretic grad-cam integrated vit-cnn hybrids with inherent explainability for early thyroid cancer diagnosis from ultrasound,'' \emph{Diagnostics}, vol.~16, p. 999, 3 2026.
 
 \bibitem{Vanitha2025}
-K.~Vanitha, T.~R. Mahesh, V.~V. Kumar, and S.~Guluwadi, ``Enhanced tuberculosis
-  detection using vision transformers and explainable ai with a grad-cam
-  approach on chest x-rays,'' \emph{BMC Medical Imaging}, vol.~25, p.~96, 3
-  2025.
+K.~Vanitha, T.~R. Mahesh, V.~V. Kumar, and S.~Guluwadi, ``Enhanced tuberculosis detection using vision transformers and explainable ai with a grad-cam approach on chest x-rays,'' \emph{BMC Medical Imaging}, vol.~25, p.~96, 3 2025.
 
 \bibitem{AbdEl-Ghany2025}
-S.~A. El-Ghany, M.~A. Mahmood, and A.~A.~A. El-Aziz, ``Automated eye disease
-  diagnosis using a 2d cnn with grad-cam: High-accuracy detection of retinal
-  asymmetries for multiclass classification,'' \emph{Symmetry}, vol.~17, p.
-  768, 5 2025.
+S.~A. El-Ghany, M.~A. Mahmood, and A.~A.~A. El-Aziz, ``Automated eye disease diagnosis using a 2d cnn with grad-cam: High-accuracy detection of retinal asymmetries for multiclass classification,'' \emph{Symmetry}, vol.~17, p. 768, 5 2025.
 
 \bibitem{Abnar2020}
-S.~Abnar and W.~Zuidema, ``Quantifying attention flow in transformers,'' in
-  \emph{Proceedings of the 58th Annual Meeting of the Association for
-  Computational Linguistics}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Association for Computational Linguistics, 2020, pp. 4190--4197.
+S.~Abnar and W.~Zuidema, ``Quantifying attention flow in transformers,'' in \emph{Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computational Linguistics, 2020, pp. 4190--4197.
 
 \bibitem{Cheng2025}
-Z.~Cheng, Y.~Wu, Y.~Li, L.~Cai, and B.~Ihnaini, ``A comprehensive review of
-  explainable artificial intelligence (xai) in computer vision,''
-  \emph{Sensors}, vol.~25, p. 4166, 7 2025.
+Z.~Cheng, Y.~Wu, Y.~Li, L.~Cai, and B.~Ihnaini, ``A comprehensive review of explainable artificial intelligence (xai) in computer vision,'' \emph{Sensors}, vol.~25, p. 4166, 7 2025.
 
 \bibitem{Li2023}
-Y.~Li, J.~Wang, X.~Dai, L.~Wang, C.-C.~M. Yeh, Y.~Zheng, W.~Zhang, and K.-L.
-  Ma, ``How does attention work in vision transformers? a visual analytics
-  attempt,'' \emph{IEEE Transactions on Visualization and Computer Graphics},
-  vol.~29, pp. 2888--2900, 6 2023.
+Y.~Li, J.~Wang, X.~Dai, L.~Wang, C.-C.~M. Yeh, Y.~Zheng, W.~Zhang, and K.-L. Ma, ``How does attention work in vision transformers? a visual analytics attempt,'' \emph{IEEE Transactions on Visualization and Computer Graphics}, vol.~29, pp. 2888--2900, 6 2023.
 
 \bibitem{petsiuk2018riserandomizedinputsampling}
 \BIBentryALTinterwordspacing
-V.~Petsiuk, A.~Das, and K.~Saenko, ``Rise: Randomized input sampling for
-  explanation of black-box models,'' 2018. [Online]. Available:
-  \url{https://arxiv.org/abs/1806.07421}
+V.~Petsiuk, A.~Das, and K.~Saenko, ``Rise: Randomized input sampling for explanation of black-box models,'' 2018. [Online]. Available: \url{https://arxiv.org/abs/1806.07421}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Skliarov2025}
-M.~Skliarov, R.~E. Shawi, C.~Dhaoui, and N.~Ahmed, ``A comparative evaluation
-  of explainability techniques for image data,'' \emph{Scientific Reports},
-  vol.~15, p. 41898, 11 2025.
+M.~Skliarov, R.~E. Shawi, C.~Dhaoui, and N.~Ahmed, ``A comparative evaluation of explainability techniques for image data,'' \emph{Scientific Reports}, vol.~15, p. 41898, 11 2025.
 
 \end{thebibliography}

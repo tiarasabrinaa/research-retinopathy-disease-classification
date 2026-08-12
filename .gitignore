@@ -1,1 +1,6 @@
 dataset/
+dataset.tar.gz
+checkpoints/*
+checkpoints2/*
+
+.gitignore
