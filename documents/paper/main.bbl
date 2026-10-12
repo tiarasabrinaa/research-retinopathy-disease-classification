@@ -83,6 +83,9 @@ R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra, ``Gr
 A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai, T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly, J.~Uszkoreit, and N.~Houlsby, ``An image is worth 16x16 words: Transformers for image recognition at scale,'' 2021. [Online]. Available: \url{https://arxiv.org/abs/2010.11929}
 \BIBentrySTDinterwordspacing
 
+\bibitem{ZoltnVarga2024}
+by~Zoltán~Varga and U.~D.~J. Sliwowski, ``Multimodal transformer modelsfor human action classification diplom-ingenieur automation and robotic systems (ue066 515),'' 2024.
+
 \bibitem{Pina2025}
 O.~Pina, E.~Dorca, and V.~Vilaplana, ``Cell nuclei detection and classification in whole slide images with transformers,'' \emph{arXiv preprint arXiv:2502.06307v1}, 2 2025.
 
