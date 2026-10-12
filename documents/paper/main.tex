@@ -3,7 +3,9 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\setlength{\defaultaddspace}{2pt} % gap added by \addlinespace between table rows
 \usepackage{tabularx}
+\usepackage{stfloats}
 \usepackage{tikz}
 \usetikzlibrary{positioning, arrows.meta}
 
@@ -52,7 +54,7 @@ email address or ORCID}
 
 
 \begin{abstract}
-Placeholder abstract text.
+Early and accurate detection of eye diseases is critical to preventing irreversible vision loss, yet most deep learning diagnostic models remain limited by their "black-box" nature and lack of quantitative interpretability validation. This study presents a comprehensive comparative evaluation between modern Convolutional Neural Networks (ConvNeXt-Tiny) and Vision Transformers (DeiT-Small) for multiclass retinal disease classification using fundus images (categorized into cataract, diabetic retinopathy, glaucoma, and normal classes). Beyond standard classification performance metrics—where DeiT-Small and ConvNeXt-Tiny achieved comparable overall macro-F1 scores of 87.74\% and 87.63\%, respectively—this work provides a rigorous quantitative assessment of visual explanation faithfulness. Specifically, we evaluate the explanation fidelity of Grad-CAM (for ConvNeXt) and Attention Rollout (for DeiT) using patch-based deletion and insertion Area Under the Curve (AUC) metrics. Our findings demonstrate that while both architectures exhibit strong discriminative power and clinical alignment on localized lesions (such as diabetic retinopathy and glaucoma), their explainability profiles differ significantly in spatial focus and faithfulness. This research advances medical image analysis by bridging the gap between classification accuracy and explainability validation, offering empirical guidelines for selecting optimal model-XAI combinations in clinical decision-support systems.
 \end{abstract}
 
 \begin{IEEEkeywords}

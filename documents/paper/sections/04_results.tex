@@ -12,19 +12,19 @@ Table~\ref{tab:hyperparam_selection} summarizes the selected configuration for e
 \caption{Selected Hyperparameter Configuration per Architecture}
 \label{tab:hyperparam_selection}
 \centering
-\begin{tabular}{lcc}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcc@{}}
 \toprule
 \textbf{Hyperparameter} & \textbf{ConvNeXt-Tiny} & \textbf{DeiT-Small} \\
 \midrule
 Linear probe learning rate & $1\times10^{-3}$ & $1\times10^{-3}$ \\
-Full fine-tuning learning rate & $5\times10^{-5}$ & $1\times5^{-5}$ \\
+Full fine-tuning learning rate & $1\times10^{-5}$ & $1\times10^{-4}$ \\
 Weight decay & $0.05$ & $0.05$ \\
 Label smoothing & $0.1$ & $0.1$ \\
 Linear probe epochs & 5 & 5 \\
-Full fine-tuning epochs & 45 & 45 \\
+Full fine-tuning epoch budget & 30 & 40 \\
 Batch size & 32 & 32 \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 The selected configuration for each architecture converged well before its configured epoch budget was exhausted (epoch 11 of 30 for ConvNeXt-Tiny, epoch 19 of 40 for DeiT-Small), consistent with the two-phase fine-tuning scheme reaching its best validation macro-F1 early in the full-fine-tuning phase.
@@ -39,7 +39,7 @@ Diabetic retinopathy recall is reported separately, as it serves as the tie-brea
 \caption{Test-Set Classification Performance}
 \label{tab:classification_performance}
 \centering
-\begin{tabular}{lcc}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcc@{}}
 \toprule
 \textbf{Metric} & \textbf{ConvNeXt-Tiny} & \textbf{DeiT-Small} \\
 \midrule
@@ -50,7 +50,7 @@ Macro F1-score & 87.63\% & \textbf{87.74\%} \\
 Macro ROC-AUC & \textbf{98.15\%} & 97.06\% \\
 DR Recall (tie-breaker) & \textbf{99.39\%} & 95.76\% \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 Table~\ref{tab:per_class_performance} further reports the per-class precision, recall, and F1-score for the winning model, providing a more detailed view of class-wise classification behavior, particularly for the minority glaucoma class.
@@ -59,7 +59,7 @@ Table~\ref{tab:per_class_performance} further reports the per-class precision, r
 \caption{Per-Class Performance of the Selected Model (DeiT-Small)}
 \label{tab:per_class_performance}
 \centering
-\begin{tabular}{lccc}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccc@{}}
 \toprule
 \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
 \midrule
@@ -68,7 +68,7 @@ Diabetic Retinopathy & 87.78\% & 95.76\% & 91.59\% \\
 Glaucoma & 86.26\% & 74.83\% & 80.14\% \\
 Normal & 84.62\% & 88.82\% & 86.67\% \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 Based on the test-set macro-F1, DeiT-Small (87.74\%) marginally outperformed ConvNeXt-Tiny (87.63\%) -- a gap of only $0.11$ percentage points, small enough that the two architectures are effectively comparable in overall discriminative power.
@@ -110,14 +110,14 @@ Table~\ref{tab:faithfulness} summarizes the resulting scores, averaged across th
 \caption{Deletion and Insertion AUC of Grad-CAM and Attention Rollout ($n=40$ sampled test images)}
 \label{tab:faithfulness}
 \centering
-\begin{tabular}{lcc}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcc@{}}
 \toprule
 \textbf{XAI Method} & \textbf{Deletion AUC} $\downarrow$ & \textbf{Insertion AUC} $\uparrow$ \\
 \midrule
 Grad-CAM (ConvNeXt-Tiny) & \textbf{0.3906} & 0.6982 \\
 Attention Rollout (DeiT-Small) & 0.4626 & \textbf{0.7263} \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 A lower deletion AUC indicates that the regions identified as important are indeed critical to the model's prediction, whereas a higher insertion AUC indicates that the highlighted regions are sufficient to recover the model's confidence.

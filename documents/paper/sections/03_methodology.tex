@@ -98,18 +98,18 @@ Both ConvNeXt and DeiT were fine-tuned using the AdamW optimizer \cite{loshchilo
 Although the original papers employ different optimization settings, particularly for large-scale ImageNet pretraining, reproducing their exact recipes was impractical given the hardware constraints and the smaller size of the diabetic retinopathy dataset.
 A unified configuration was therefore adopted for both models to ensure a fair comparison.
 
-Rather than exhaustively tuning every hyperparameter, only the fine-tuning learning rate was optimized, using random search over grid search.
-This choice follows Bergstra and Bengio \cite{JMLR:v13:bergstra12a}, who showed that random search is generally more efficient because only a small subset of hyperparameters typically has a significant impact on model performance, and this importance varies across datasets.
+Rather than exhaustively tuning every hyperparameter, only the fine-tuning learning rate and the fine-tuning epoch budget were optimized, using a grid search over three learning rates ($10^{-4}$, $5\times10^{-5}$, and $10^{-5}$) and five epoch budgets ($10$, $20$, $30$, $40$, and $50$), giving $15$ configurations per architecture.
+Restricting the search to these two hyperparameters follows Bergstra and Bengio \cite{JMLR:v13:bergstra12a}, who showed that only a small subset of hyperparameters typically has a significant impact on model performance, which keeps an exhaustive grid over the remaining search space computationally tractable.
 All remaining settings were fixed across both architectures and selected from their official training recipes or adjusted to the available computational budget.
-Table~\ref{tab:hyperparameter} summarizes the final configuration.
+For each architecture, the configuration with the highest validation macro-F1 was selected.
+Table~\ref{tab:hyperparameter} summarizes the final configuration, where values that differ between the two models are given as ConvNeXt / DeiT.
 
 \begin{table}[htbp]
     \caption{Final Hyperparameter Configuration.}
     \label{tab:hyperparameter}
     \centering
-    \small
     \setlength{\tabcolsep}{4pt}
-    \begin{tabularx}{\columnwidth}{>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}X}
+    \begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}X@{}}
         \toprule
         \textbf{Hyperparameter} & \textbf{Value} & \textbf{Source / Justification} \\
         \midrule
@@ -125,9 +125,9 @@ Table~\ref{tab:hyperparameter} summarizes the final configuration.
         \addlinespace
         Linear probe epochs & 5 & Chosen to initialize the classifier before fine-tuning \\
         \addlinespace
-        Fine-tuning epochs & 25 & Selected based on computational budget \\
+        Fine-tuning epochs & $30$ / $40$ & Grid search over $\{10, 20, 30, 40, 50\}$ \\
         \addlinespace
-        Fine-tuning LR & Random search & Tuned during experiments \\
+        Fine-tuning LR & $10^{-5}$ / $10^{-4}$ & Grid search over $\{10^{-4}, 5\times10^{-5}, 10^{-5}\}$ \\
         \addlinespace
         Batch size & 32 & Limited by available GPU memory \\
         \bottomrule
@@ -172,9 +172,8 @@ As summarized in Table~\ref{tab:medical_gradcam_comparison}, Grad-CAM has demons
     \caption{Applications of Grad-CAM in Medical Image Analysis.}
     \label{tab:medical_gradcam_comparison}
     \centering
-    \small
     \setlength{\tabcolsep}{4pt}
-    \begin{tabularx}{\columnwidth}{>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}X}
+    \begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}X@{}}
         \toprule
         \textbf{Medical Domain} & \textbf{Architecture} & \textbf{Interpretability Outcome} \\
         \midrule
@@ -226,9 +225,8 @@ A summary of the differences between Attention Rollout and Grad-CAM is presented
     \caption{Comparison between Grad-CAM and Attention Rollout}
     \label{tab:gradcam_rollout}
     \centering
-    \small
     \setlength{\tabcolsep}{6pt}
-    \begin{tabularx}{\columnwidth}{>{\raggedright\arraybackslash}p{2.5cm} >{\raggedright\arraybackslash}X}
+    \begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{2.5cm} >{\raggedright\arraybackslash}X@{}}
         \toprule
         \textbf{Method} & \textbf{Characteristics} \\
         \midrule
@@ -248,11 +246,16 @@ A summary of the differences between Attention Rollout and Grad-CAM is presented
 
 The quality of the generated saliency maps was quantitatively evaluated using the deletion and insertion Area Under the Curve (AUC) metrics.
 These metrics are both model-agnostic and explanation-agnostic because they assess explanation quality based solely on changes in the model prediction after perturbing the input image, regardless of the internal mechanism used to generate the explanation \cite{petsiuk2018riserandomizedinputsampling, Skliarov2025}.
-Deletion AUC measures whether the pixels identified as important by a saliency map are truly critical for the model prediction, while insertion AUC measures how effectively the highlighted regions restore the model prediction.
+Deletion AUC measures whether the regions identified as important by a saliency map are truly critical for the model prediction, while insertion AUC measures how effectively the highlighted regions restore the model prediction.
 
-Deletion AUC starts by ranking all image pixels according to their importance values in the generated heatmap.
-Then, the most important pixels are then progressively removed or replaced with a predefined baseline while the confidence score of the target class is recorded after each steps \cite{petsiuk2018riserandomizedinputsampling}.
-The AUC is then calculated from plotting the resulting confidence values against the fraction of removed pixels, where a lower AUC indicates a more faithful explanation because the model confidence decreases rapidly when the truly relevant regions are removed \cite{Cheng2025}.
+The original formulation perturbs the image pixel by pixel \cite{petsiuk2018riserandomizedinputsampling}.
+In this study, the perturbation is instead applied at the patch level: every heatmap is expressed on a common $14 \times 14$ grid of $16 \times 16$-pixel patches over the $224 \times 224$ input, which is the native patch grid of DeiT, and the Grad-CAM map of ConvNeXt is bilinearly resized to the same grid.
+Using the same perturbation granularity for both architectures keeps their faithfulness scores directly comparable.
+As the uninformative baseline, a heavily Gaussian-blurred copy of the input image (kernel size $51$, $\sigma = 41$) is used rather than a constant black or gray image, so that perturbed regions do not introduce sharp artificial edges that the model has never seen during training.
 
-Insertion AUC starts with an uninformative baseline image and the most important pixels are gradually inserted according to their ranking in the saliency map \cite{petsiuk2018riserandomizedinputsampling}.
-The AUC is then calculated from plotting the prediction confidence against the fraction of inserted pixels, where a higher AUC indicates a more faithful explanation because the selected pixels rapidly recover the confidence of the target prediction \cite{Cheng2025}.
+Deletion AUC starts by ranking all $196$ patches according to their importance values in the generated heatmap.
+The most important patches are then progressively replaced, one patch per step, with the corresponding region of the blurred baseline while the softmax confidence of the predicted class is recorded after each step.
+The AUC is then calculated with the trapezoidal rule from the resulting confidence values plotted against the fraction of removed patches, where a lower AUC indicates a more faithful explanation because the model confidence decreases rapidly when the truly relevant regions are removed \cite{Cheng2025}.
+
+Insertion AUC starts from the blurred baseline image, and the original patches are gradually inserted in the same order of importance.
+The AUC is then calculated from the prediction confidence plotted against the fraction of inserted patches, where a higher AUC indicates a more faithful explanation because the selected patches rapidly recover the confidence of the target prediction \cite{Cheng2025}.

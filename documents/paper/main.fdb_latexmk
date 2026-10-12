@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1791793685.63907 "main.aux" "main.bbl" "main" 1791793968.70233 0
+["bibtex main"] 1791814667.88772 "main.aux" "main.bbl" "main" 1791814669.19196 0
   "./references.bib" 1791793968.6064 26538 085b75ef3d4703cc76c243ce5c8cb35a ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1791793968.57339 8215 9c576012d85b1f7814e2aa1a7cf8a40f "pdflatex"
+  "main.aux" 1791814669.07515 8147 501355adbf3debd186721d9b2a62f133 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1791793967.26713 "/Users/tiarasabrina/Documents/PROJECT/AI/research-retinopathy-disease-classification/documents/paper/main.tex" "main.pdf" "main" 1791793968.70262 0
-  "/Users/tiarasabrina/Documents/PROJECT/AI/research-retinopathy-disease-classification/documents/paper/main.tex" 1790774160.27218 1914 cf4e08f408f9267fb4017bb0efd79c0f ""
+["pdflatex"] 1791814667.92011 "/Users/tiarasabrina/Documents/PROJECT/AI/research-retinopathy-disease-classification/documents/paper/main.tex" "main.pdf" "main" 1791814669.19217 0
+  "/Users/tiarasabrina/Documents/PROJECT/AI/research-retinopathy-disease-classification/documents/paper/main.tex" 1791814666.19735 3487 601437987ebac08190f9663f87e59857 ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -53,7 +53,6 @@
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
-  "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -174,14 +173,15 @@
   "figures/confusion_matrix.png" 1785907989.20315 62549 b8302c82cf48c739c3ef90abce6a11f3 ""
   "figures/methodology_version1.png" 1785869856.33055 160339 9b35a3b1d82bdcefbecda2f9c1a0852f ""
   "figures/xai_qualitative_comparison.png" 1785907938.24686 1547994 d7d078ba26f493820b107a0d558f20ef ""
-  "main.aux" 1791793968.57339 8215 9c576012d85b1f7814e2aa1a7cf8a40f "pdflatex"
-  "main.bbl" 1791793685.66388 11012 90e4712bee52f50778e7c6430440a16a "bibtex main"
-  "main.tex" 1790774160.27218 1914 cf4e08f408f9267fb4017bb0efd79c0f ""
-  "sections/01_introduction.tex" 1791793925.78433 6112 9d92d45883f69620055859ab4df6cb6c ""
-  "sections/02_related_work.tex" 1791793966.80632 6165 1dce8b44f334a517644932e4817e5211 ""
-  "sections/03_methodology.tex" 1791793925.78601 17581 66c8f726b827c7307b536ff486dea5dd ""
-  "sections/04_results.tex" 1791793925.78699 11748 c687ccaac9a8c560a081ceb14808dd69 ""
+  "main.aux" 1791814669.07515 8147 501355adbf3debd186721d9b2a62f133 "pdflatex"
+  "main.bbl" 1791814667.91698 11012 90e4712bee52f50778e7c6430440a16a "bibtex main"
+  "main.tex" 1791814666.19735 3487 601437987ebac08190f9663f87e59857 ""
+  "sections/01_introduction.tex" 1791814539.36674 4978 78e3ccd3492bf4dd4ca14c948130ea79 ""
+  "sections/02_related_work.tex" 1791814666.19592 6206 5234b70b360a2f968988928bacf4157b ""
+  "sections/03_methodology.tex" 1791814666.19701 18774 fa57eac88a27c3e5f72f6c77318b3e82 ""
+  "sections/04_results.tex" 1791814666.19642 11919 bdd6115be8ed751e813afb863c712f3d ""
   "sections/05_conclusion.tex" 1791793925.78759 49 6fd51616e53a90534f2780de294b2bb2 ""
+  "stfloats.sty" 1791814179.32973 19135 2044f4970d2ece01df5d5dfacaaaec0f ""
   (generated)
   "main.aux"
   "main.log"
