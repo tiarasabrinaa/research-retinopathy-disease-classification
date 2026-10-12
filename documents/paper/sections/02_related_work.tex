@@ -21,7 +21,7 @@ Normal & 1,074 & 25.47 \\
 \end{tabular}
 \end{table}
 
-Dataset characteristics are relatively consistent across studies, comprising 4,217 fundus images categorized into four classes: cataract, diabetic retinopathy, glaucoma, and normal eyes \cite{erdas2024,jibon2025}. Although the dataset is relatively balanced, glaucoma represents the minority class, which motivates the use of data augmentation techniques during preprocessing.
+Dataset characteristics are relatively consistent across studies, comprising 4,217 fundus images categorized into four classes: cataract, diabetic retinopathy, glaucoma, and normal eyes \cite{erdas2024,jibon2025}. Although the dataset is relatively balanced, glaucoma represents the minority class, which motivates the use of data augmentation techniques during preprocessing. Furthermore, the dataset provides inherent inter-subject variability across different patients. Similar cross-subject challenges in biomedical data were highlighted by Colot et al. \cite{Colot2023}, emphasizing the need for robust feature evaluation beyond standard accuracy.
 
 The dataset has been utilized in several studies to evaluate the performance of deep learning models. A comparative study involving DenseNet, EfficientNet, Xception, VGG, and ResNet was conducted in \cite{erdas2024}. Among these architectures, EfficientNet achieved the highest accuracy of 87.84\%. Subsequently, transfer learning with EfficientNet-B3 combined with data augmentation and cosine annealing learning rate scheduling was proposed in \cite{alsohemi2025}, resulting in an improved accuracy of 95.12\%.
 
@@ -33,7 +33,8 @@ Based on these studies, existing research on this dataset primarily focuses on c
 
 As representative architectures of modern convolutional networks and vision transformers, ConvNeXt and DeiT have demonstrated promising performance across various image classification tasks. ConvNeXt was introduced in \cite{Liu2022} as a modernization of the ResNet architecture by incorporating several design principles inspired by Vision Transformers, including patchify stems, depthwise convolutions, inverted bottlenecks, larger kernel sizes, and simplified normalization and activation layers.
 
-On the other hand, DeiT (Data-efficient Image Transformer) was proposed in \cite{touvron2021trainingdataefficientimagetransformers} as an extension of the original Vision Transformer architecture \cite{dosovitskiy2021imageworth16x16words}. DeiT introduces a knowledge distillation strategy that enables transformer models to be trained effectively on relatively smaller datasets while maintaining competitive performance.
+On the other hand, DeiT (Data-efficient Image Transformer) was proposed in \cite{touvron2021trainingdataefficientimagetransformers} as an extension of the original Vision Transformer architecture \cite{dosovitskiy2021imageworth16x16words}. DeiT introduces a knowledge distillation strategy that enables transformer models to be trained effectively on relatively smaller datasets while maintaining competitive performance. 
+Beyond classification, the adaptation of transformer architectures and attention mechanisms has also demonstrated strong efficacy across diverse computer vision domain tasks \cite{Pina2025}.
 
 Several comparative studies have investigated the strengths and limitations of CNN and Vision Transformer architectures in image analysis tasks. A literature review presented in \cite{mauricio2023} concluded that CNNs benefit from strong inductive biases and superior data efficiency, whereas Vision Transformers are more effective at capturing global contextual information but generally require larger datasets and greater computational resources.
 

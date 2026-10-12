@@ -66,6 +66,9 @@ C.~Erdas and G.~Arslan, ``Efficient detection of multiclass eye diseases using d
 \bibitem{jibon2025}
 F.~Jibon, F.~Rabby, N.~Rahman, M.~Uddin, F.~Rushu, M.~Islam, M.~A. Uddin, A.~Khraisat, M.~Kazi, and M.~A. Talukder, ``Tl-med: Multiclass eye disease classification based on ensemble transfer learning and crvo–brvo detection via a single shot multibox detector,'' \emph{DIGITAL HEALTH}, vol.~11, 09 2025.
 
+\bibitem{Colot2023}
+M.~Colot, C.~Simar, M.~Petieau, A.~M.~C. Alvarez, G.~Cheron, and G.~Bontempi, ``Emg subspace alignment and visualization for cross-subject hand gesture classification,'' \emph{arXiv preprint arXiv:2401.05386}, 2023.
+
 \bibitem{alsohemi2025}
 R.~Alsohemi and S.~Dardouri, ``Fundus image-based eye disease detection using efficientnetb3 architecture,'' \emph{Journal of Imaging}, vol.~11, p. 279, 08 2025.
 
@@ -79,6 +82,9 @@ R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra, ``Gr
 \BIBentryALTinterwordspacing
 A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai, T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly, J.~Uszkoreit, and N.~Houlsby, ``An image is worth 16x16 words: Transformers for image recognition at scale,'' 2021. [Online]. Available: \url{https://arxiv.org/abs/2010.11929}
 \BIBentrySTDinterwordspacing
+
+\bibitem{Pina2025}
+O.~Pina, E.~Dorca, and V.~Vilaplana, ``Cell nuclei detection and classification in whole slide images with transformers,'' \emph{arXiv preprint arXiv:2502.06307v1}, 2 2025.
 
 \bibitem{mauricio2023}
 J.~Maur{\'\i}cio, I.~Domingues, and J.~Bernardino, ``Comparing vision transformers and convolutional neural networks for image classification: A literature review,'' \emph{Applied Sciences}, vol.~13, no.~9, p. 5521, 2023.
