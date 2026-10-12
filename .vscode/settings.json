@@ -1,0 +1,9 @@
+{
+    "[latex]": {
+        "editor.wordWrap": "on",
+        "editor.wrappingIndent": "indent"
+    },
+    "[bibtex]": {
+        "editor.wordWrap": "on"
+    }
+}
