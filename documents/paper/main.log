@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.12)  12 OCT 2026 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.12)  13 OCT 2026 19:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -495,7 +495,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <figures/methodology_version1.png, id=4, 516.93124pt x 104.39pt>
 File: figures/methodology_version1.png Graphic file (type png)
 <use figures/methodology_version1.png>
-Package pdftex.def Info: figures/methodology_version1.png  used on input line 6.
+Package pdftex.def Info: figures/methodology_version1.png  used on input line 4.
 (pdftex.def)             Requested size: 516.0pt x 104.2129pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -503,10 +503,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1{/Users/tiarasabrina/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
- <./figures/methodology_version1.png>]) (./sections/02_related_work.tex
-Underfull \vbox (badness 2261) has occurred while \output is active []
-
- [2]) (./sections/03_methodology.tex
+ <./figures/methodology_version1.png>]) (./sections/02_related_work.tex [2]) (./sections/03_methodology.tex
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 64.
  (/Users/tiarasabrina/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
@@ -516,28 +513,33 @@ File: figures/DeiT-main-architecture.png Graphic file (type png)
 <use figures/DeiT-main-architecture.png>
 Package pdftex.def Info: figures/DeiT-main-architecture.png  used on input line 84.
 (pdftex.def)             Requested size: 232.19843pt x 104.89946pt.
- [3] [4 <./figures/DeiT-main-architecture.png>] [5]) (./sections/04_results.tex
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 31.
- (/Users/tiarasabrina/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-<figures/confusion_matrix.png, id=44, 361.35pt x 289.08pt>
-File: figures/confusion_matrix.png Graphic file (type png)
-<use figures/confusion_matrix.png>
-Package pdftex.def Info: figures/confusion_matrix.png  used on input line 83.
-(pdftex.def)             Requested size: 232.19843pt x 185.76042pt.
+ [3 <./figures/DeiT-main-architecture.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \hbox (badness 5161) in paragraph at lines 90--96
+ [4]) (./sections/04_results.tex [5]
+<figures/confusion_matrix_version2.png, id=44, 207.77625pt x 106.3975pt>
+File: figures/confusion_matrix_version2.png Graphic file (type png)
+<use figures/confusion_matrix_version2.png>
+Package pdftex.def Info: figures/confusion_matrix_version2.png  used on input line 116.
+(pdftex.def)             Requested size: 232.19843pt x 118.90787pt.
+
+Underfull \hbox (badness 5161) in paragraph at lines 123--129
 []\OT1/ptm/m/n/10 Fig. 5[] presents qual-i-ta-tive ex-am-ples of Grad-CAM
  []
 
-[6]
-<figures/xai_qualitative_comparison.png, id=49, 542.025pt x 722.7pt>
+
+Underfull \vbox (badness 5802) has occurred while \output is active []
+
+ [6]
+<figures/xai_qualitative_comparison.png, id=48, 542.025pt x 722.7pt>
 File: figures/xai_qualitative_comparison.png Graphic file (type png)
 <use figures/xai_qualitative_comparison.png>
-Package pdftex.def Info: figures/xai_qualitative_comparison.png  used on input line 99.
+Package pdftex.def Info: figures/xai_qualitative_comparison.png  used on input line 132.
 (pdftex.def)             Requested size: 428.40181pt x 571.20242pt.
-) (./sections/05_conclusion.tex [7 <./figures/confusion_matrix.png>]) (./main.bbl [8])
+ [7 <./figures/confusion_matrix_version2.png>]) (./sections/05_conclusion.tex) (./main.bbl
+Underfull \vbox (badness 1107) has occurred while \output is active []
+
+ [8])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -558,18 +560,18 @@ L3 programming layer <2026-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14933 strings out of 469114
- 305931 string characters out of 5457616
- 707453 words of memory out of 5000000
- 43665 multiletter control sequences out of 15000+600000
- 675854 words of font info for 138 fonts, out of 8000000 for 9000
+ 14897 strings out of 469114
+ 305454 string characters out of 5457616
+ 706560 words of memory out of 5000000
+ 43634 multiletter control sequences out of 15000+600000
+ 675339 words of font info for 136 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  84i,11n,104p,1622b,801s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 3247457 bytes).
+</Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/tiarasabrina/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (10 pages, 3234433 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 140 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

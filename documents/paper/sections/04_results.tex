@@ -27,8 +27,32 @@ Batch size & 32 & 32 \\
 \end{tabular*}
 \end{table}
 
-The selected configuration for each architecture converged well before its configured epoch budget was exhausted (epoch 11 of 30 for ConvNeXt-Tiny, epoch 19 of 40 for DeiT-Small), consistent with the two-phase fine-tuning scheme reaching its best validation macro-F1 early in the full-fine-tuning phase.
-The full ranking of all $15$ grid-search combinations per architecture is available in the accompanying evaluation notebook (\texttt{eval.ipynb}).
+Table~\ref{tab:grid_search} reports the validation macro-F1 of all $15$ grid-search configurations per architecture.
+The scores vary by less than two percentage points within each architecture ($89.78$--$91.48\%$ for ConvNeXt-Tiny and $90.37$--$92.34\%$ for DeiT-Small), indicating that neither model is highly sensitive to these two hyperparameters.
+ConvNeXt-Tiny performed best with the smallest learning rate, whereas DeiT-Small benefited from the largest learning rate combined with a longer epoch budget.
+
+\begin{table}[htbp]
+\caption{Validation Macro-F1 (\%) of All Grid-Search Configurations}
+\label{tab:grid_search}
+\centering
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llccccc@{}}
+\toprule
+ & & \multicolumn{5}{c}{\textbf{Full fine-tuning epoch budget}} \\
+\cmidrule{3-7}
+\textbf{Model} & \textbf{LR} & \textbf{10} & \textbf{20} & \textbf{30} & \textbf{40} & \textbf{50} \\
+\midrule
+ConvNeXt-Tiny & $1\times10^{-5}$ & 91.30 & 91.32 & \textbf{91.48} & 91.48 & 91.33 \\
+ & $5\times10^{-5}$ & 90.51 & 91.01 & 90.90 & 91.02 & 91.35 \\
+ & $1\times10^{-4}$ & 91.32 & 90.24 & 89.78 & 90.65 & 90.56 \\
+\midrule
+DeiT-Small & $1\times10^{-5}$ & 90.37 & 91.35 & 91.51 & 91.83 & 92.30 \\
+ & $5\times10^{-5}$ & 91.48 & 91.63 & 92.13 & 91.97 & 91.61 \\
+ & $1\times10^{-4}$ & 91.33 & 91.87 & 92.01 & \textbf{92.34} & 92.15 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+The selected configuration for each architecture reached its best validation macro-F1 well before its epoch budget was exhausted (fine-tuning epoch 7 of 30 for ConvNeXt-Tiny and 15 of 40 for DeiT-Small).
 
 \subsection{Classification Performance}
 
@@ -53,35 +77,44 @@ DR Recall (tie-breaker) & \textbf{99.39\%} & 95.76\% \\
 \end{tabular*}
 \end{table}
 
-Table~\ref{tab:per_class_performance} further reports the per-class precision, recall, and F1-score for the winning model, providing a more detailed view of class-wise classification behavior, particularly for the minority glaucoma class.
+Table~\ref{tab:per_class_performance} further reports the per-class precision (P), recall (R), and F1-score of both models, providing a more detailed view of class-wise classification behavior, particularly for the minority glaucoma class.
 
 \begin{table}[htbp]
-\caption{Per-Class Performance of the Selected Model (DeiT-Small)}
+\caption{Per-Class Test-Set Performance of Both Models (\%)}
 \label{tab:per_class_performance}
 \centering
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccc@{}}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcccccc@{}}
 \toprule
-\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+ & \multicolumn{3}{c}{\textbf{ConvNeXt-Tiny}} & \multicolumn{3}{c}{\textbf{DeiT-Small}} \\
+\cmidrule{2-4} \cmidrule{5-7}
+\textbf{Class} & \textbf{P} & \textbf{R} & \textbf{F1} & \textbf{P} & \textbf{R} & \textbf{F1} \\
 \midrule
-Cataract & 93.46\% & 91.67\% & 92.56\% \\
-Diabetic Retinopathy & 87.78\% & 95.76\% & 91.59\% \\
-Glaucoma & 86.26\% & 74.83\% & 80.14\% \\
-Normal & 84.62\% & 88.82\% & 86.67\% \\
+Cataract & 91.08 & 91.67 & 91.37 & 93.46 & 91.67 & 92.56 \\
+DR & 87.70 & 99.39 & 93.18 & 87.78 & 95.76 & 91.59 \\
+Glaucoma & 85.50 & 74.17 & 79.43 & 86.26 & 74.83 & 80.14 \\
+Normal & 87.34 & 85.71 & 86.52 & 84.62 & 88.82 & 86.67 \\
 \bottomrule
 \end{tabular*}
 \end{table}
 
+Both architectures reached an identical test accuracy of $87.99\%$, each correctly classifying $557$ of the $633$ test images, so accuracy alone cannot separate them.
 Based on the test-set macro-F1, DeiT-Small (87.74\%) marginally outperformed ConvNeXt-Tiny (87.63\%) -- a gap of only $0.11$ percentage points, small enough that the two architectures are effectively comparable in overall discriminative power.
 Since the macro-F1 values were not exactly tied, the diabetic retinopathy recall tie-breaker was not formally invoked; however, it is worth noting that ConvNeXt-Tiny attained a substantially higher DR recall ($99.39\%$ vs. $95.76\%$) and macro ROC-AUC ($98.15\%$ vs. $97.06\%$), a discrepancy discussed further in Section~IV-E.
-Per the strict macro-F1 ranking, DeiT-Small is treated as the best-performing architecture and is used as the subject of the per-class analysis above; both architectures' checkpoints are nonetheless carried forward into the explainability analysis in the following subsections, since faithfulness is compared architecture-to-architecture (Grad-CAM vs. Attention Rollout) rather than reduced to a single winner.
-Both models show the same qualitative weak point: glaucoma has the lowest recall of the four classes ($74.83\%$ for DeiT-Small), reflecting its status as the dataset's minority class (Table~\ref{tab:dataset}).
+Per the strict macro-F1 ranking, DeiT-Small is treated as the best-performing architecture; both architectures' checkpoints are nonetheless carried forward into the explainability analysis in the following subsections, since faithfulness is compared architecture-to-architecture (Grad-CAM vs. Attention Rollout) rather than reduced to a single winner.
 
-Fig.~\ref{fig:confusion_matrix} shows the row-normalized confusion matrix of the selected model (DeiT-Small) on the test set, confirming that glaucoma is most frequently confused with cataract and normal, while diabetic retinopathy and cataract are both classified with high recall.
+The per-class results in Table~\ref{tab:per_class_performance} show where the two models differ despite their equal accuracy.
+The two models share the same cataract recall ($91.67\%$), while DeiT-Small is stronger on the normal class ($88.82\%$ vs. $85.71\%$ recall) and ConvNeXt-Tiny is stronger on diabetic retinopathy ($99.39\%$ vs. $95.76\%$ recall).
+Both models show the same weak point: glaucoma has the lowest recall of the four classes ($74.17\%$ for ConvNeXt-Tiny and $74.83\%$ for DeiT-Small), and it is also the smallest class in the test set ($151$ images).
+
+Fig.~\ref{fig:confusion_matrix} shows the confusion matrices of both models on the test set, in raw image counts.
+ConvNeXt-Tiny missed only $1$ of the $165$ diabetic retinopathy images, compared with $7$ for DeiT-Small.
+For glaucoma, the errors of both models follow the same pattern: the misclassified images are assigned mostly to normal ($18$ for ConvNeXt-Tiny, $19$ for DeiT-Small) and to diabetic retinopathy ($14$ for both), and only rarely to cataract ($7$ and $5$).
+In the opposite direction, normal images are most often mistaken for glaucoma ($15$ and $12$), indicating that the glaucoma--normal boundary is the main source of error for both architectures.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.45\textwidth]{figures/confusion_matrix.png}
-    \caption{Normalized confusion matrix of the selected model (DeiT-Small) on the test set.}
+    \includegraphics[width=0.45\textwidth]{figures/confusion_matrix_version2.png}
+    \caption{Confusion matrices of (a) ConvNeXt-Tiny and (b) DeiT-Small on the test set (image counts).}
     \label{fig:confusion_matrix}
 \end{figure}
 
@@ -104,7 +137,13 @@ Attention Rollout's tendency to assign non-trivial weight to border/corner patch
 \subsection{Faithfulness Evaluation}
 
 To quantitatively assess the faithfulness of the generated explanations, deletion and insertion AUC were computed for Grad-CAM on ConvNeXt-Tiny and Attention Rollout on DeiT-Small using patch-based perturbation, as described in Section~III-C.
-Table~\ref{tab:faithfulness} summarizes the resulting scores, averaged across the test set.
+The scores were computed on $40$ randomly sampled test images per architecture, each explained with respect to the class predicted by the model.
+
+Both metrics are read from a curve of the model's confidence in its predicted class as the image is perturbed patch by patch in the order given by the heatmap.
+For deletion, the curve starts at the confidence on the original image and the most important patches are removed first, so a faithful heatmap makes the confidence fall quickly and yields a small area under the curve.
+For insertion, the curve starts at the confidence on the blurred baseline and the most important patches are restored first, so a faithful heatmap makes the confidence rise quickly and yields a large area.
+Because both the confidence and the fraction of perturbed patches lie in $[0, 1]$, each AUC also lies in $[0, 1]$ and can be read as the average confidence retained over the whole perturbation sequence.
+Table~\ref{tab:faithfulness} summarizes the resulting scores, averaged over the sampled images.
 
 \begin{table}[htbp]
 \caption{Deletion and Insertion AUC of Grad-CAM and Attention Rollout ($n=40$ sampled test images)}
@@ -120,10 +159,36 @@ Attention Rollout (DeiT-Small) & 0.4626 & \textbf{0.7263} \\
 \end{tabular*}
 \end{table}
 
-A lower deletion AUC indicates that the regions identified as important are indeed critical to the model's prediction, whereas a higher insertion AUC indicates that the highlighted regions are sufficient to recover the model's confidence.
-The two methods split the faithfulness comparison: Grad-CAM is more faithful under deletion (confidence collapses faster once its tightly localized high-activation regions are removed), while Attention Rollout is more faithful under insertion (its more diffuse attention pattern is more effective at partially recovering confidence once even a modest fraction of highlighted patches is revealed).
-This is consistent with the qualitative pattern in Fig.~\ref{fig:xai_qualitative}: Grad-CAM's sharper, more concentrated activations make it more brittle when its narrow high-activation region does not fall on the pathology (as in the cataract example), whereas Attention Rollout's broader coverage is less precise but more robust to partial evidence.
-Per-class breakdown (available in \texttt{eval.ipynb}) shows both methods are most faithful on glaucoma (deletion AUC of $0.14$ for Grad-CAM and $0.09$ for Attention Rollout), where the pathology is concentrated at a single, well-localized structure (the optic disc), and least faithful on cataract, matching the qualitative finding that neither method localizes cataract's diffuse presentation well.
+A deletion AUC of $0.3906$ therefore means that ConvNeXt-Tiny retains on average about $39\%$ confidence in its prediction while the patches ranked highest by Grad-CAM are progressively removed, against about $46\%$ for DeiT-Small under Attention Rollout.
+Conversely, an insertion AUC of $0.7263$ means that DeiT-Small holds on average about $73\%$ confidence while the patches ranked highest by Attention Rollout are progressively restored, against about $70\%$ for ConvNeXt-Tiny under Grad-CAM.
+The two methods thus split the faithfulness comparison: Grad-CAM is more faithful under deletion (a margin of $0.072$), while Attention Rollout is more faithful under insertion (a smaller margin of $0.028$).
+This is consistent with the qualitative pattern in Fig.~\ref{fig:xai_qualitative}: Grad-CAM's sharper, more concentrated activations identify a small set of patches whose removal quickly lowers the confidence, whereas Attention Rollout's broader coverage is less precise but recovers the confidence slightly faster as patches are restored.
+Since each method is paired with a different architecture, these scores compare the two model--explanation pairs rather than the two explanation methods in isolation.
+
+\begin{table}[htbp]
+\caption{Per-Class Deletion (Del.) and Insertion (Ins.) AUC, Grouped by Predicted Class}
+\label{tab:faithfulness_per_class}
+\centering
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & \multicolumn{3}{c}{\textbf{Grad-CAM}} & \multicolumn{3}{c}{\textbf{Attention Rollout}} \\
+\cmidrule{2-4} \cmidrule{5-7}
+\textbf{Class} & $n$ & \textbf{Del.} $\downarrow$ & \textbf{Ins.} $\uparrow$ & $n$ & \textbf{Del.} $\downarrow$ & \textbf{Ins.} $\uparrow$ \\
+\midrule
+Cataract & 12 & 0.687 & 0.656 & 11 & 0.845 & 0.860 \\
+DR & 10 & 0.412 & 0.892 & 10 & 0.550 & 0.840 \\
+Glaucoma & 10 & 0.136 & 0.692 & 9 & 0.089 & 0.748 \\
+Normal & 8 & 0.237 & 0.527 & 10 & 0.291 & 0.445 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+Table~\ref{tab:faithfulness_per_class} breaks the scores down by predicted class.
+Both methods obtain their lowest deletion AUC on glaucoma ($0.136$ for Grad-CAM and $0.089$ for Attention Rollout), where the pathology is concentrated at a single, well-localized structure (the optic disc), so removing the few highlighted patches is enough to collapse the prediction.
+Cataract shows the opposite behavior, with the highest deletion AUC for both methods ($0.687$ and $0.845$): the confidence stays high even after the top-ranked patches are removed, matching the qualitative finding that neither method localizes cataract's diffuse presentation well.
+A likely contributing factor is the perturbation baseline itself: a heavily blurred fundus image resembles the hazy appearance of a cataract, so replacing patches with blur removes little cataract evidence.
+The same effect would explain why Attention Rollout reaches a high insertion AUC on cataract ($0.860$) while both methods obtain their lowest insertion AUC on the normal class ($0.527$ and $0.445$), since a blurred starting image already favors the cataract prediction and many sharp patches must be restored before the model becomes confident that an image is normal.
+The per-class values are each averaged over only $8$ to $12$ images and should be read as indicative.
 
 \subsection{Discussion}
 
