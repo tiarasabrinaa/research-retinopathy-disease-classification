@@ -1,0 +1,774 @@
+{
+  "convnext_tiny": {
+    "xai_method": "grad_cam",
+    "checkpoint": "../checkpoints/_best_convnext_tiny_lr1e-05_ep30/best.pt",
+    "seed": 0,
+    "num_images": 40,
+    "deletion_auc_mean": 0.39062535172394874,
+    "insertion_auc_mean": 0.6981600431660642,
+    "per_predicted_class": {
+      "cataract": {
+        "n": 12,
+        "deletion_auc_mean": 0.6866169913583214,
+        "insertion_auc_mean": 0.6554998551451023
+      },
+      "diabetic_retinopathy": {
+        "n": 10,
+        "deletion_auc_mean": 0.4124403180312175,
+        "insertion_auc_mean": 0.8920475790695267
+      },
+      "glaucoma": {
+        "n": 10,
+        "deletion_auc_mean": 0.13630024525384438,
+        "insertion_auc_mean": 0.6924741007083532
+      },
+      "normal": {
+        "n": 8,
+        "deletion_auc_mean": 0.23727556747593442,
+        "insertion_auc_mean": 0.526898333390317
+      }
+    },
+    "examples": [
+      {
+        "index": 497,
+        "filepath": "dataset/cataract/_72_6009084.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8234265580469248,
+        "insertion_auc": 0.7826855584066741
+      },
+      {
+        "index": 394,
+        "filepath": "dataset/diabetic_retinopathy/11432_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.7755961082115465,
+        "insertion_auc": 0.9295516277150231
+      },
+      {
+        "index": 488,
+        "filepath": "dataset/glaucoma/1374_right.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.07630519518077525,
+        "insertion_auc": 0.7910571195641342
+      },
+      {
+        "index": 265,
+        "filepath": "dataset/normal/2890_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.1897429837465134,
+        "insertion_auc": 0.5983983699650485
+      }
+    ],
+    "per_image": [
+      {
+        "index": 394,
+        "filepath": "dataset/diabetic_retinopathy/11432_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.7755961082115465,
+        "insertion_auc": 0.9295516277150231
+      },
+      {
+        "index": 430,
+        "filepath": "dataset/glaucoma/1287_left.jpg",
+        "true": "glaucoma",
+        "pred": "normal",
+        "deletion_auc": 0.22381508962384292,
+        "insertion_auc": 0.3787743204596395
+      },
+      {
+        "index": 41,
+        "filepath": "dataset/diabetic_retinopathy/11476_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.5466847970169417,
+        "insertion_auc": 0.7886524112248907
+      },
+      {
+        "index": 265,
+        "filepath": "dataset/normal/2890_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.1897429837465134,
+        "insertion_auc": 0.5983983699650485
+      },
+      {
+        "index": 523,
+        "filepath": "dataset/normal/2780_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.13529471349332253,
+        "insertion_auc": 0.36838953284907855
+      },
+      {
+        "index": 497,
+        "filepath": "dataset/cataract/_72_6009084.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8234265580469248,
+        "insertion_auc": 0.7826855584066741
+      },
+      {
+        "index": 414,
+        "filepath": "dataset/cataract/2210_right.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.6472884634015511,
+        "insertion_auc": 0.6088165804287609
+      },
+      {
+        "index": 310,
+        "filepath": "dataset/normal/2563_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.2950146394396885,
+        "insertion_auc": 0.7553527154009408
+      },
+      {
+        "index": 488,
+        "filepath": "dataset/glaucoma/1374_right.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.07630519518077525,
+        "insertion_auc": 0.7910571195641342
+      },
+      {
+        "index": 366,
+        "filepath": "dataset/glaucoma/1440_left.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.23066841957292383,
+        "insertion_auc": 0.6871096408944957
+      },
+      {
+        "index": 597,
+        "filepath": "dataset/cataract/629_left.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.6666339911824586,
+        "insertion_auc": 0.8123241069973731
+      },
+      {
+        "index": 223,
+        "filepath": "dataset/normal/2488_left.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.20930830695267233,
+        "insertion_auc": 0.41654427465507565
+      },
+      {
+        "index": 516,
+        "filepath": "dataset/cataract/cataract_034.png",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.4716411203298033,
+        "insertion_auc": 0.5741089021368903
+      },
+      {
+        "index": 142,
+        "filepath": "dataset/cataract/_373_4029422.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.6585378618720842,
+        "insertion_auc": 0.6671171092561312
+      },
+      {
+        "index": 288,
+        "filepath": "dataset/glaucoma/_338_7660594.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.11393178497650185,
+        "insertion_auc": 0.8199630014750422
+      },
+      {
+        "index": 143,
+        "filepath": "dataset/diabetic_retinopathy/10942_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.7764874523391528,
+        "insertion_auc": 0.8289326665048696
+      },
+      {
+        "index": 97,
+        "filepath": "dataset/cataract/cataract_077.png",
+        "true": "cataract",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.10532532108719556,
+        "insertion_auc": 0.9012299020375524
+      },
+      {
+        "index": 256,
+        "filepath": "dataset/cataract/2052_right.jpg",
+        "true": "cataract",
+        "pred": "glaucoma",
+        "deletion_auc": 0.13397004987512315,
+        "insertion_auc": 0.6262094966154925
+      },
+      {
+        "index": 545,
+        "filepath": "dataset/normal/3241_left.jpg",
+        "true": "normal",
+        "pred": "glaucoma",
+        "deletion_auc": 0.09074076343498819,
+        "insertion_auc": 0.7993917420354424
+      },
+      {
+        "index": 616,
+        "filepath": "dataset/cataract/2155_right.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.5467204286203701,
+        "insertion_auc": 0.7178484751481791
+      },
+      {
+        "index": 150,
+        "filepath": "dataset/normal/2735_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.3472257331750184,
+        "insertion_auc": 0.6461935406574523
+      },
+      {
+        "index": 317,
+        "filepath": "dataset/diabetic_retinopathy/1266_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.30438875277735744,
+        "insertion_auc": 0.9107674349631582
+      },
+      {
+        "index": 101,
+        "filepath": "dataset/cataract/cataract_003.png",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.6059702199180514,
+        "insertion_auc": 0.26675668028088245
+      },
+      {
+        "index": 75,
+        "filepath": "dataset/diabetic_retinopathy/11067_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.2205436877830296,
+        "insertion_auc": 0.9166238856863002
+      },
+      {
+        "index": 338,
+        "filepath": "dataset/cataract/_289_683957.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8009978845259365,
+        "insertion_auc": 0.6084156679559727
+      },
+      {
+        "index": 483,
+        "filepath": "dataset/cataract/970_right.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8535775837241386,
+        "insertion_auc": 0.5608262225833474
+      },
+      {
+        "index": 573,
+        "filepath": "dataset/glaucoma/_237_8364169.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.19926967712746438,
+        "insertion_auc": 0.5920435137742636
+      },
+      {
+        "index": 103,
+        "filepath": "dataset/diabetic_retinopathy/10244_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.27830799547385193,
+        "insertion_auc": 0.9219899281707344
+      },
+      {
+        "index": 362,
+        "filepath": "dataset/normal/2887_left.jpg",
+        "true": "normal",
+        "pred": "glaucoma",
+        "deletion_auc": 0.10008617473899253,
+        "insertion_auc": 0.33657750677393405
+      },
+      {
+        "index": 444,
+        "filepath": "dataset/cataract/477_left.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.7589862645432657,
+        "insertion_auc": 0.5978533979125168
+      },
+      {
+        "index": 323,
+        "filepath": "dataset/diabetic_retinopathy/11316_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.27278648437552,
+        "insertion_auc": 0.9397538584866085
+      },
+      {
+        "index": 625,
+        "filepath": "dataset/glaucoma/_353_6531128.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.08949275790447635,
+        "insertion_auc": 0.6519396478424266
+      },
+      {
+        "index": 209,
+        "filepath": "dataset/cataract/_204_5979635.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.5518711909499703,
+        "insertion_auc": 0.8618711198927188
+      },
+      {
+        "index": 565,
+        "filepath": "dataset/normal/2632_left.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.32253871389607686,
+        "insertion_auc": 0.511687087864444
+      },
+      {
+        "index": 453,
+        "filepath": "dataset/glaucoma/_369_4797724.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.16193914993152933,
+        "insertion_auc": 0.7074899379240006
+      },
+      {
+        "index": 533,
+        "filepath": "dataset/normal/2743_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.17526435948034025,
+        "insertion_auc": 0.5398468252708565
+      },
+      {
+        "index": 266,
+        "filepath": "dataset/glaucoma/_203_5167688.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.1665984797956688,
+        "insertion_auc": 0.9129594001843004
+      },
+      {
+        "index": 63,
+        "filepath": "dataset/diabetic_retinopathy/11288_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.7340482689288197,
+        "insertion_auc": 0.9028243630820391
+      },
+      {
+        "index": 561,
+        "filepath": "dataset/diabetic_retinopathy/10645_right.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.1102343123187596,
+        "insertion_auc": 0.8801497128240916
+      },
+      {
+        "index": 14,
+        "filepath": "dataset/cataract/_324_9920354.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8537523291853009,
+        "insertion_auc": 0.8073744407417822
+      }
+    ]
+  },
+  "deit_small_patch16_224": {
+    "xai_method": "attention_rollout",
+    "checkpoint": "../checkpoints/_best_deit_small_lr1e-04_ep40/best.pt",
+    "seed": 0,
+    "num_images": 40,
+    "deletion_auc_mean": 0.4625794601388444,
+    "insertion_auc_mean": 0.7262642616553161,
+    "per_predicted_class": {
+      "cataract": {
+        "n": 11,
+        "deletion_auc_mean": 0.8446926794572973,
+        "insertion_auc_mean": 0.860388506214257
+      },
+      "diabetic_retinopathy": {
+        "n": 10,
+        "deletion_auc_mean": 0.5504911837595686,
+        "insertion_auc_mean": 0.8397710501957608
+      },
+      "glaucoma": {
+        "n": 9,
+        "deletion_auc_mean": 0.088677001107709,
+        "insertion_auc_mean": 0.7484469647503978
+      },
+      "normal": {
+        "n": 10,
+        "deletion_auc_mean": 0.2908554083958436,
+        "insertion_auc_mean": 0.44525637131446266
+      }
+    },
+    "examples": [
+      {
+        "index": 497,
+        "filepath": "dataset/cataract/_72_6009084.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.7129567840269633,
+        "insertion_auc": 0.9284677958610106
+      },
+      {
+        "index": 394,
+        "filepath": "dataset/diabetic_retinopathy/11432_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.9248812173550226,
+        "insertion_auc": 0.9365081318026902
+      },
+      {
+        "index": 488,
+        "filepath": "dataset/glaucoma/1374_right.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.12489583389833568,
+        "insertion_auc": 0.5891065352776904
+      },
+      {
+        "index": 265,
+        "filepath": "dataset/normal/2890_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.4108025859756281,
+        "insertion_auc": 0.19573421822860834
+      }
+    ],
+    "per_image": [
+      {
+        "index": 394,
+        "filepath": "dataset/diabetic_retinopathy/11432_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.9248812173550226,
+        "insertion_auc": 0.9365081318026902
+      },
+      {
+        "index": 430,
+        "filepath": "dataset/glaucoma/1287_left.jpg",
+        "true": "glaucoma",
+        "pred": "normal",
+        "deletion_auc": 0.20064497918926405,
+        "insertion_auc": 0.2950471679202509
+      },
+      {
+        "index": 41,
+        "filepath": "dataset/diabetic_retinopathy/11476_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.889223425211955,
+        "insertion_auc": 0.916494286334028
+      },
+      {
+        "index": 265,
+        "filepath": "dataset/normal/2890_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.4108025859756281,
+        "insertion_auc": 0.19573421822860834
+      },
+      {
+        "index": 523,
+        "filepath": "dataset/normal/2780_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.3340589897805107,
+        "insertion_auc": 0.4782662609320642
+      },
+      {
+        "index": 497,
+        "filepath": "dataset/cataract/_72_6009084.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.7129567840269633,
+        "insertion_auc": 0.9284677958610106
+      },
+      {
+        "index": 414,
+        "filepath": "dataset/cataract/2210_right.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.5997931257802612,
+        "insertion_auc": 0.8556670840373453
+      },
+      {
+        "index": 310,
+        "filepath": "dataset/normal/2563_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.21296313089943414,
+        "insertion_auc": 0.6163833446661723
+      },
+      {
+        "index": 488,
+        "filepath": "dataset/glaucoma/1374_right.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.12489583389833568,
+        "insertion_auc": 0.5891065352776904
+      },
+      {
+        "index": 366,
+        "filepath": "dataset/glaucoma/1440_left.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.1384363726247102,
+        "insertion_auc": 0.7390676087234169
+      },
+      {
+        "index": 597,
+        "filepath": "dataset/cataract/629_left.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.9139015098311463,
+        "insertion_auc": 0.4091906672229572
+      },
+      {
+        "index": 223,
+        "filepath": "dataset/normal/2488_left.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.11535331221981619,
+        "insertion_auc": 0.14538331193212722
+      },
+      {
+        "index": 516,
+        "filepath": "dataset/cataract/cataract_034.png",
+        "true": "cataract",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.10118452652490564,
+        "insertion_auc": 0.3689146482822846
+      },
+      {
+        "index": 142,
+        "filepath": "dataset/cataract/_373_4029422.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8205067448470057,
+        "insertion_auc": 0.913190125658804
+      },
+      {
+        "index": 288,
+        "filepath": "dataset/glaucoma/_338_7660594.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.02705568633736016,
+        "insertion_auc": 0.8125954238265486
+      },
+      {
+        "index": 143,
+        "filepath": "dataset/diabetic_retinopathy/10942_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.8914391553523588,
+        "insertion_auc": 0.943050558165628
+      },
+      {
+        "index": 97,
+        "filepath": "dataset/cataract/cataract_077.png",
+        "true": "cataract",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.13170622137128088,
+        "insertion_auc": 0.7312997916751369
+      },
+      {
+        "index": 256,
+        "filepath": "dataset/cataract/2052_right.jpg",
+        "true": "cataract",
+        "pred": "glaucoma",
+        "deletion_auc": 0.04413663249044698,
+        "insertion_auc": 0.6830128971297217
+      },
+      {
+        "index": 545,
+        "filepath": "dataset/normal/3241_left.jpg",
+        "true": "normal",
+        "pred": "glaucoma",
+        "deletion_auc": 0.06298203434681102,
+        "insertion_auc": 0.681368853968131
+      },
+      {
+        "index": 616,
+        "filepath": "dataset/cataract/2155_right.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8512463219919982,
+        "insertion_auc": 0.8785656030688966
+      },
+      {
+        "index": 150,
+        "filepath": "dataset/normal/2735_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.43844869766831013,
+        "insertion_auc": 0.43369826850034676
+      },
+      {
+        "index": 317,
+        "filepath": "dataset/diabetic_retinopathy/1266_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.7042491105290091,
+        "insertion_auc": 0.9210682532617023
+      },
+      {
+        "index": 101,
+        "filepath": "dataset/cataract/cataract_003.png",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8256429109950454,
+        "insertion_auc": 0.8827137323666592
+      },
+      {
+        "index": 75,
+        "filepath": "dataset/diabetic_retinopathy/11067_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.40723755849259236,
+        "insertion_auc": 0.8119046304907117
+      },
+      {
+        "index": 338,
+        "filepath": "dataset/cataract/_289_683957.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.9179822107662959,
+        "insertion_auc": 0.9268871824048003
+      },
+      {
+        "index": 483,
+        "filepath": "dataset/cataract/970_right.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.9083367832461181,
+        "insertion_auc": 0.9115806214359341
+      },
+      {
+        "index": 573,
+        "filepath": "dataset/glaucoma/_237_8364169.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.22519024631022758,
+        "insertion_auc": 0.6757828745544336
+      },
+      {
+        "index": 103,
+        "filepath": "dataset/diabetic_retinopathy/10244_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.2213886238596573,
+        "insertion_auc": 0.9148344743464674
+      },
+      {
+        "index": 362,
+        "filepath": "dataset/normal/2887_left.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.11736788767703561,
+        "insertion_auc": 0.593842220438017
+      },
+      {
+        "index": 444,
+        "filepath": "dataset/cataract/477_left.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.8959999371852193,
+        "insertion_auc": 0.9079334989798311
+      },
+      {
+        "index": 323,
+        "filepath": "dataset/diabetic_retinopathy/11316_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.37963949020343773,
+        "insertion_auc": 0.9320465513333982
+      },
+      {
+        "index": 625,
+        "filepath": "dataset/glaucoma/_353_6531128.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.03901186108123511,
+        "insertion_auc": 0.7999925925942821
+      },
+      {
+        "index": 209,
+        "filepath": "dataset/cataract/_204_5979635.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.9307867686967459,
+        "insertion_auc": 0.9332111252813923
+      },
+      {
+        "index": 565,
+        "filepath": "dataset/normal/2632_left.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.3206201954210196,
+        "insertion_auc": 0.6749129261992567
+      },
+      {
+        "index": 453,
+        "filepath": "dataset/glaucoma/_369_4797724.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.03355005936820668,
+        "insertion_auc": 0.8497427764220391
+      },
+      {
+        "index": 533,
+        "filepath": "dataset/normal/2743_right.jpg",
+        "true": "normal",
+        "pred": "normal",
+        "deletion_auc": 0.29343708142239067,
+        "insertion_auc": 0.6417282373307044
+      },
+      {
+        "index": 266,
+        "filepath": "dataset/glaucoma/_203_5167688.jpg",
+        "true": "glaucoma",
+        "pred": "glaucoma",
+        "deletion_auc": 0.10283428351204765,
+        "insertion_auc": 0.9053531202573176
+      },
+      {
+        "index": 63,
+        "filepath": "dataset/diabetic_retinopathy/11288_left.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "diabetic_retinopathy",
+        "deletion_auc": 0.8539625086954661,
+        "insertion_auc": 0.9215891762655608
+      },
+      {
+        "index": 561,
+        "filepath": "dataset/diabetic_retinopathy/10645_right.jpeg",
+        "true": "diabetic_retinopathy",
+        "pred": "normal",
+        "deletion_auc": 0.4648572237050274,
+        "insertion_auc": 0.37756775699707923
+      },
+      {
+        "index": 14,
+        "filepath": "dataset/cataract/_324_9920354.jpg",
+        "true": "cataract",
+        "pred": "cataract",
+        "deletion_auc": 0.9144663766634706,
+        "insertion_auc": 0.9168661320391965
+      }
+    ]
+  }
+}

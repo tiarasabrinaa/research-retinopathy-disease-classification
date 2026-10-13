@@ -1,0 +1,30 @@
+[
+  {
+    "index": 497,
+    "filepath": "dataset/cataract/_72_6009084.jpg",
+    "true": "cataract",
+    "pred_convnext_tiny": "cataract",
+    "pred_deit_small_patch16_224": "cataract"
+  },
+  {
+    "index": 394,
+    "filepath": "dataset/diabetic_retinopathy/11432_left.jpeg",
+    "true": "diabetic_retinopathy",
+    "pred_convnext_tiny": "diabetic_retinopathy",
+    "pred_deit_small_patch16_224": "diabetic_retinopathy"
+  },
+  {
+    "index": 488,
+    "filepath": "dataset/glaucoma/1374_right.jpg",
+    "true": "glaucoma",
+    "pred_convnext_tiny": "glaucoma",
+    "pred_deit_small_patch16_224": "glaucoma"
+  },
+  {
+    "index": 265,
+    "filepath": "dataset/normal/2890_right.jpg",
+    "true": "normal",
+    "pred_convnext_tiny": "normal",
+    "pred_deit_small_patch16_224": "normal"
+  }
+]

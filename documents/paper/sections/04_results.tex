@@ -137,16 +137,18 @@ Attention Rollout's tendency to assign non-trivial weight to border/corner patch
 \subsection{Faithfulness Evaluation}
 
 To quantitatively assess the faithfulness of the generated explanations, deletion and insertion AUC were computed for Grad-CAM on ConvNeXt-Tiny and Attention Rollout on DeiT-Small using patch-based perturbation, as described in Section~III-C.
-The scores were computed on $40$ randomly sampled test images per architecture, each explained with respect to the class predicted by the model.
+The scores were computed on all $633$ test images for each architecture, each explained with respect to the class predicted by the model.
 
 Both metrics are read from a curve of the model's confidence in its predicted class as the image is perturbed patch by patch in the order given by the heatmap.
 For deletion, the curve starts at the confidence on the original image and the most important patches are removed first, so a faithful heatmap makes the confidence fall quickly and yields a small area under the curve.
 For insertion, the curve starts at the confidence on the blurred baseline and the most important patches are restored first, so a faithful heatmap makes the confidence rise quickly and yields a large area.
 Because both the confidence and the fraction of perturbed patches lie in $[0, 1]$, each AUC also lies in $[0, 1]$ and can be read as the average confidence retained over the whole perturbation sequence.
-Table~\ref{tab:faithfulness} summarizes the resulting scores, averaged over the sampled images.
+Table~\ref{tab:faithfulness} summarizes the resulting scores, averaged over the test set.
 
+% TODO(full-test-rerun): the AUC values below are still from the 40-image sample (results/faithfulness.json).
+% Replace them with the output of `python faithfulness.py` on all 633 test images before submission.
 \begin{table}[htbp]
-\caption{Deletion and Insertion AUC of Grad-CAM and Attention Rollout ($n=40$ sampled test images)}
+\caption{Deletion and Insertion AUC of Grad-CAM and Attention Rollout ($n=633$ test images)}
 \label{tab:faithfulness}
 \centering
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcc@{}}
@@ -159,12 +161,16 @@ Attention Rollout (DeiT-Small) & 0.4626 & \textbf{0.7263} \\
 \end{tabular*}
 \end{table}
 
+% TODO(full-test-rerun): the numbers quoted in this paragraph (0.3906, 39%, 46%, 0.7263, 73%, 70%, 0.072, 0.028) follow the table above.
 A deletion AUC of $0.3906$ therefore means that ConvNeXt-Tiny retains on average about $39\%$ confidence in its prediction while the patches ranked highest by Grad-CAM are progressively removed, against about $46\%$ for DeiT-Small under Attention Rollout.
 Conversely, an insertion AUC of $0.7263$ means that DeiT-Small holds on average about $73\%$ confidence while the patches ranked highest by Attention Rollout are progressively restored, against about $70\%$ for ConvNeXt-Tiny under Grad-CAM.
 The two methods thus split the faithfulness comparison: Grad-CAM is more faithful under deletion (a margin of $0.072$), while Attention Rollout is more faithful under insertion (a smaller margin of $0.028$).
 This is consistent with the qualitative pattern in Fig.~\ref{fig:xai_qualitative}: Grad-CAM's sharper, more concentrated activations identify a small set of patches whose removal quickly lowers the confidence, whereas Attention Rollout's broader coverage is less precise but recovers the confidence slightly faster as patches are restored.
 Since each method is paired with a different architecture, these scores compare the two model--explanation pairs rather than the two explanation methods in isolation.
 
+% TODO(full-test-rerun): the AUC values below are still from the 40-image sample (results/faithfulness.json).
+% Replace them with the output of `python faithfulness.py` on all 633 test images before submission.
+% The n columns are already the full-test counts of predicted classes (column sums of the confusion matrices).
 \begin{table}[htbp]
 \caption{Per-Class Deletion (Del.) and Insertion (Ins.) AUC, Grouped by Predicted Class}
 \label{tab:faithfulness_per_class}
@@ -175,20 +181,20 @@ Since each method is paired with a different architecture, these scores compare 
 \cmidrule{2-4} \cmidrule{5-7}
 \textbf{Class} & $n$ & \textbf{Del.} $\downarrow$ & \textbf{Ins.} $\uparrow$ & $n$ & \textbf{Del.} $\downarrow$ & \textbf{Ins.} $\uparrow$ \\
 \midrule
-Cataract & 12 & 0.687 & 0.656 & 11 & 0.845 & 0.860 \\
-DR & 10 & 0.412 & 0.892 & 10 & 0.550 & 0.840 \\
-Glaucoma & 10 & 0.136 & 0.692 & 9 & 0.089 & 0.748 \\
-Normal & 8 & 0.237 & 0.527 & 10 & 0.291 & 0.445 \\
+Cataract & 157 & 0.687 & 0.656 & 153 & 0.845 & 0.860 \\
+DR & 187 & 0.412 & 0.892 & 180 & 0.550 & 0.840 \\
+Glaucoma & 131 & 0.136 & 0.692 & 131 & 0.089 & 0.748 \\
+Normal & 158 & 0.237 & 0.527 & 169 & 0.291 & 0.445 \\
 \bottomrule
 \end{tabular*}
 \end{table}
 
+% TODO(full-test-rerun): the per-class numbers quoted in this paragraph follow the table above.
 Table~\ref{tab:faithfulness_per_class} breaks the scores down by predicted class.
 Both methods obtain their lowest deletion AUC on glaucoma ($0.136$ for Grad-CAM and $0.089$ for Attention Rollout), where the pathology is concentrated at a single, well-localized structure (the optic disc), so removing the few highlighted patches is enough to collapse the prediction.
 Cataract shows the opposite behavior, with the highest deletion AUC for both methods ($0.687$ and $0.845$): the confidence stays high even after the top-ranked patches are removed, matching the qualitative finding that neither method localizes cataract's diffuse presentation well.
 A likely contributing factor is the perturbation baseline itself: a heavily blurred fundus image resembles the hazy appearance of a cataract, so replacing patches with blur removes little cataract evidence.
 The same effect would explain why Attention Rollout reaches a high insertion AUC on cataract ($0.860$) while both methods obtain their lowest insertion AUC on the normal class ($0.527$ and $0.445$), since a blurred starting image already favors the cataract prediction and many sharp patches must be restored before the model becomes confident that an image is normal.
-The per-class values are each averaged over only $8$ to $12$ images and should be read as indicative.
 
 \subsection{Discussion}
 
@@ -200,6 +206,5 @@ This reinforces the motivation stated in Section~I: accuracy comparison alone is
 
 This study has several limitations.
 The hyperparameter search covered only $3$ learning rates $\times$ $5$ epoch budgets ($15$ configurations) per architecture, so the reported results reflect the best configuration found within this grid rather than a globally optimal one.
-Faithfulness scores were computed on a $40$-image subsample of the test set per architecture rather than the full test set, for computational tractability; the resulting deletion/insertion AUC values should be read as estimates.
 The qualitative comparison in Fig.~\ref{fig:xai_qualitative} is illustrative (one image per class) rather than an exhaustive audit, and a larger-scale clinical validation with ophthalmologist-annotated lesion masks would be needed to more rigorously confirm the anatomical relevance of the highlighted regions.
 Finally, both models were fine-tuned and evaluated on a single dataset of $4{,}217$ images from one source; generalization to other fundus imaging devices, populations, or class distributions remains untested.

@@ -2,7 +2,7 @@ PWD /Users/tiarasabrina/Documents/PROJECT/AI/research-retinopathy-disease-classi
 INPUT /Users/tiarasabrina/Library/TinyTeX/texmf.cnf
 INPUT /Users/tiarasabrina/Library/TinyTeX/texmf-dist/web2c/texmf.cnf
 INPUT /Users/tiarasabrina/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/tiarasabrina/Documents/PROJECT/AI/research-retinopathy-disease-classification/documents/paper/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /Users/tiarasabrina/Library/TinyTeX/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
 INPUT /Users/tiarasabrina/Library/TinyTeX/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
